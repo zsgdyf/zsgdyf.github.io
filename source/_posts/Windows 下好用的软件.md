@@ -3,6 +3,8 @@ title: Windows 下好用的软件
 tags:
   - Windows
   - 备份
+categories:
+- 技术
 abbrlink: 7484639a
 date: 2018-11-25 21:48:19
 ---
