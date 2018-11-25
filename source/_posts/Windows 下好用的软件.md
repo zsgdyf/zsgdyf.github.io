@@ -13,24 +13,21 @@ Windows 下好用的一些软件
 
 <!--more-->
 ## 截图
-### [PicPick](https://picpick.app/zh/)
-### [Snipaste](https://zh.snipaste.com/)
+- [PicPick](https://picpick.app/zh/)
+- [Snipaste](https://zh.snipaste.com/)
 
 ## 文件
-### [Listary](https://www.listary.com/)
-### [Wox](http://www.wox.one/)
+- [Listary](https://www.listary.com/)
+- [Wox](http://www.wox.one/)  
 开源软件。[GitHub 地址](https://github.com/Wox-launcher/Wox)
 
 ## 网速显示
-### TrafficMonitor
+- TrafficMonitor  
 开源软件。[GitHub 地址](https://github.com/zhongyang219/TrafficMonitor)
 
 ## 状态栏透明
-### TaskbarTool
-个人作品
-
-作者：浅陌兮。
-
-联系方式：<675903631@qq.com>
-
+- TaskbarTool  
+个人作品  
+作者：浅陌兮。  
+联系方式：<675903631@qq.com>  
 更新地址：[百度云](https://yun.baidu.com/s/1dFNAfpZ) 密码：tpi2。
