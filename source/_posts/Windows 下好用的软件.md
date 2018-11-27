@@ -13,6 +13,11 @@ Windows 下一些好用的软件
 
 <!--more-->
 
+## 写作
+
+- [Typora](https://typora.io/)  
+主题等 [GitHub 支援](https://github.com/typora)
+
 ## 截图
 
 - [PicPick](https://picpick.app/zh/)
@@ -23,6 +28,14 @@ Windows 下一些好用的软件
 - [Listary](https://www.listary.com/)
 - [Wox](http://www.wox.one/)  
 开源软件。[GitHub 地址](https://github.com/Wox-launcher/Wox)
+
+## 看图
+
+- [Honeyview](https://cn.bandisoft.com/honeyview/)
+
+## 压缩
+
+- [Bandizip](http://cn.bandisoft.com/)
 
 ## 网速显示
 
@@ -35,9 +48,18 @@ Windows 下一些好用的软件
 个人作品  
 作者：浅陌兮。  
 联系方式：<675903631@qq.com>  
-更新地址：[百度云](https://yun.baidu.com/s/1dFNAfpZ) 密码：tpi2。
+更新地址：[百度云](https://yun.baidu.com/s/1dFNAfpZ)，密码：tpi2。
 
 ## 文件预览
 
-- [QiuckLook](https://pooi.moe/QuickLook/)  
-开源软件。[GitHub地址](https://github.com/QL-Win/QuickLook)
+- [QuickLook](https://pooi.moe/QuickLook/)  
+开源软件。[GitHub 地址](https://github.com/QL-Win/QuickLook)
+
+## 应用卸载
+
+- [Geek Uninstaller](https://geekuninstaller.com)
+
+## GIF 录制
+
+- [ScreenToGif](https://www.screentogif.com/)  
+开源软件。[GitHub 地址](https://github.com/NickeManarin/ScreenToGif)
