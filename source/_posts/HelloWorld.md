@@ -7,6 +7,7 @@ categories:
 abbrlink: 77770c79
 date: 2018-09-25 08:49:29
 visible: hide
+cover: ../images/HelloWorld.png
 ---
 
 # 一切的开始
