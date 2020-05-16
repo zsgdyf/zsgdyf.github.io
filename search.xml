@@ -16,28 +16,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Windows 下更改 Telegram Desktop 默认字体</title>
-    <url>/archives/fd45428c.html</url>
-    <content><![CDATA[<p>备个份，方便以后好找。</p>
-<a id="more"></a>
-<p>感谢作者 <a href="https://github.com/ysc3839" target="_blank" rel="noopener">ysc3839</a></p>
-<p><a href="https://github.com/ysc3839/TGFont" target="_blank" rel="noopener">github 链接地址</a></p>
-<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>下载 <code>TGFont.dll</code> 并重命名为 <code>winmm.dll</code>，然后放在 Telegram 的文件夹里。</p>
-<p><a href="https://github.com/ysc3839/TGFont/releases" target="_blank" rel="noopener">下载地址</a></p>
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>初次运行时会创建 <code>TGFont.json</code>。</p>
-<p>将中文字体更改为微软雅黑，我的配置如下：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"fonts"</span>: &#123;</span><br><span class="line">		<span class="attr">"SimSun"</span>: &#123;</span><br><span class="line">			<span class="attr">"replace"</span>: <span class="string">"Microsoft YaHei UI"</span>,</span><br><span class="line">			<span class="attr">"#size"</span>: <span class="number">0</span>,</span><br><span class="line">			<span class="attr">"#width"</span>: <span class="number">0</span>,</span><br><span class="line">			<span class="attr">"#weight"</span>: <span class="number">0</span>,</span><br><span class="line">			<span class="attr">"#italic"</span>: <span class="literal">false</span>,</span><br><span class="line">			<span class="attr">"#underLine"</span>: <span class="literal">false</span>,</span><br><span class="line">			<span class="attr">"#strikeOut"</span>: <span class="literal">false</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="attr">"debug"</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-        <tag>备份</tag>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Windows 下好用的软件</title>
     <url>/archives/7484639a.html</url>
     <content><![CDATA[<p>Windows 下一些好用的软件<br>自用，备份</p>
@@ -63,7 +41,7 @@
 <li>TrafficMonitor<br>开源软件。<a href="https://github.com/zhongyang219/TrafficMonitor" target="_blank" rel="noopener">GitHub 地址</a></li>
 </ul>
 <h2 id="状态栏透明"><a href="#状态栏透明" class="headerlink" title="状态栏透明"></a>状态栏透明</h2><ul>
-<li>TaskbarTool<br>个人作品<br>作者：浅陌兮。<br>联系方式：<a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x36;&#55;&#53;&#57;&#x30;&#x33;&#54;&#51;&#49;&#64;&#113;&#x71;&#x2e;&#99;&#x6f;&#x6d;">&#x36;&#55;&#53;&#57;&#x30;&#x33;&#54;&#51;&#49;&#64;&#113;&#x71;&#x2e;&#99;&#x6f;&#x6d;</a><br>更新地址：<a href="https://yun.baidu.com/s/1dFNAfpZ" target="_blank" rel="noopener">百度云</a>，密码：tpi2。</li>
+<li>TaskbarTool<br>个人作品<br>作者：浅陌兮。<br>联系方式：<a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#x36;&#55;&#x35;&#x39;&#x30;&#51;&#x36;&#51;&#x31;&#64;&#113;&#x71;&#x2e;&#x63;&#x6f;&#109;">&#x36;&#55;&#x35;&#x39;&#x30;&#51;&#x36;&#51;&#x31;&#64;&#113;&#x71;&#x2e;&#x63;&#x6f;&#109;</a><br>更新地址：<a href="https://yun.baidu.com/s/1dFNAfpZ" target="_blank" rel="noopener">百度云</a>，密码：tpi2。</li>
 </ul>
 <h2 id="文件预览"><a href="#文件预览" class="headerlink" title="文件预览"></a>文件预览</h2><ul>
 <li><a href="https://pooi.moe/QuickLook/" target="_blank" rel="noopener">QuickLook</a><br>开源软件。<a href="https://github.com/QL-Win/QuickLook" target="_blank" rel="noopener">GitHub 地址</a></li>
@@ -79,8 +57,30 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>备份</tag>
         <tag>Windows</tag>
+        <tag>备份</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 下更改 Telegram Desktop 默认字体</title>
+    <url>/archives/fd45428c.html</url>
+    <content><![CDATA[<p>备个份，方便以后好找。</p>
+<a id="more"></a>
+<p>感谢作者 <a href="https://github.com/ysc3839" target="_blank" rel="noopener">ysc3839</a></p>
+<p><a href="https://github.com/ysc3839/TGFont" target="_blank" rel="noopener">github 链接地址</a></p>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>下载 <code>TGFont.dll</code> 并重命名为 <code>winmm.dll</code>，然后放在 Telegram 的文件夹里。</p>
+<p><a href="https://github.com/ysc3839/TGFont/releases" target="_blank" rel="noopener">下载地址</a></p>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>初次运行时会创建 <code>TGFont.json</code>。</p>
+<p>将中文字体更改为微软雅黑，我的配置如下：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"fonts"</span>: &#123;</span><br><span class="line">		<span class="attr">"SimSun"</span>: &#123;</span><br><span class="line">			<span class="attr">"replace"</span>: <span class="string">"Microsoft YaHei UI"</span>,</span><br><span class="line">			<span class="attr">"#size"</span>: <span class="number">0</span>,</span><br><span class="line">			<span class="attr">"#width"</span>: <span class="number">0</span>,</span><br><span class="line">			<span class="attr">"#weight"</span>: <span class="number">0</span>,</span><br><span class="line">			<span class="attr">"#italic"</span>: <span class="literal">false</span>,</span><br><span class="line">			<span class="attr">"#underLine"</span>: <span class="literal">false</span>,</span><br><span class="line">			<span class="attr">"#strikeOut"</span>: <span class="literal">false</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="attr">"debug"</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>Windows</tag>
+        <tag>备份</tag>
       </tags>
   </entry>
   <entry>
