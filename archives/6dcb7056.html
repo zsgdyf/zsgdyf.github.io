@@ -16,7 +16,7 @@
     <link rel="icon" href="/img/favicon.png"> 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <link rel="stylesheet" href="/css/diaspora.css">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
          (adsbygoogle = window.adsbygoogle || []).push({
               google_ad_client: "ca-pub-8691406134231910",
@@ -33,16 +33,13 @@
     <div id="single">
     <div id="top" style="display: block;">
     <div class="bar" style="width: 0;"></div>
-    <a class="icon-home image-icon" href="javascript:;" data-url="https://zsgdyf.github.io"></a>
-    <div title="播放/暂停" class="icon-play"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://zsgdyf.github.io"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
     <h3 class="subtitle">C++ 统计单词出现次数</h3>
     <div class="social">
-        <!--<div class="like-icon">-->
-            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
-        <!--</div>-->
         <div>
             <div class="share">
-                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
             </div>
             <div id="qr"></div>
         </div>
@@ -90,15 +87,20 @@
             
                 <ul id="audio-list" style="display:none">
                     
-                        <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
                     
-                        <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
                     
                 </ul>
             
         </div>
         
     <div id='gitalk-container' class="comment link"
+		data-enable='true'
         data-ae='false'
         data-ci='6343f9028efd0476e771'
         data-cs='d06ca503cc9e12a08d5323e3ead1f57b6512cff3'
@@ -112,7 +114,7 @@
     </div>
     
         <div class='side'>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#思路"><span class="toc-number">2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实现"><span class="toc-number">3.</span> <span class="toc-text">实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#包含的头文件"><span class="toc-number">3.1.</span> <span class="toc-text">包含的头文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#map-的用法"><span class="toc-number">3.2.</span> <span class="toc-text">map 的用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#去掉标点符号"><span class="toc-number">3.3.</span> <span class="toc-text">去掉标点符号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将单词全部转换成小写"><span class="toc-number">3.4.</span> <span class="toc-text">将单词全部转换成小写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用-for-循环输出-map"><span class="toc-number">3.5.</span> <span class="toc-text">使用 for 循环输出 map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将-map-按值排序并输出"><span class="toc-number">3.6.</span> <span class="toc-text">将 map 按值排序并输出</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#思路"><span class="toc-number">2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实现"><span class="toc-number">3.</span> <span class="toc-text">实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#包含的头文件"><span class="toc-number">3.1.</span> <span class="toc-text">包含的头文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#map-的用法"><span class="toc-number">3.2.</span> <span class="toc-text">map 的用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#去掉标点符号"><span class="toc-number">3.3.</span> <span class="toc-text">去掉标点符号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将单词全部转换成小写"><span class="toc-number">3.4.</span> <span class="toc-text">将单词全部转换成小写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用-for-循环输出-map"><span class="toc-number">3.5.</span> <span class="toc-text">使用 for 循环输出 map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将-map-按值排序并输出"><span class="toc-number">3.6.</span> <span class="toc-text">将 map 按值排序并输出</span></a></li></ol></li></ol>	
         </div>
     
 </div>
@@ -124,6 +126,7 @@
 <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
 <script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
 <script src="/js/diaspora.js"></script>
 <link rel="stylesheet" href="/photoswipe/photoswipe.css">
 <link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
@@ -177,6 +180,27 @@
         </div>
     </div>
 </div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 
 

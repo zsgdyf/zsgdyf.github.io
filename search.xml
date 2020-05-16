@@ -1,120 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[日语学习笔记（一） -- 「は」和「が」的区别]]></title>
-    <url>%2Farchives%2F5aefdc5d.html</url>
-    <content type="text"><![CDATA[「は」と「が」の区別强调的部分不同「は」是强调「は」后面的部分，而「が」是强调「が」前面的部分。 例如： 「A は B です。」和「A が B です。」 前句强调的是 B ，而后句强调的是 A。 实际语境看一下： -- お国はどちらですか？ -- 私 は 日本人です。（强调是「日本人」） 和 -- 誰か日本人ですか？ -- 私 が 日本人です。（强调「我」是） 的区别。 来源视频：日本学霸给你讲解は和が的微妙区别 新信息和旧信息在标日P228页中对于「～が～です」的语法讲解中，提到「新信息做主语时用『が』来表示」，而在使用「A は B です。」的表达的时候，A 是旧信息，B是新信息。 书上给出的例子是： 山田先生 は どの方ですか？ -- 山田先生 は あの方です。 -- あの方 が 山田先生です。 并且还讲到，叙述直接观察到的某个事物，而不是作为话题在谈论这个事物时，使用「『名词』が『动词』」的形式，因为这里也同样是新信息在做主语。 例如： 子供 が 公園で遊んでいます。 バス が 来ました。 以及我们熟悉的 天気がいいです。 所以按照这个观点，标日解释了为何「何」「誰」「何処」「何時」疑问词做主语时不能用「は」，只能用「が」，因为这些词不能表示旧信息。 所以我们只能说 誰 が いますか？ 和 何 が すきですか？]]></content>
+    <title>HelloWorld</title>
+    <url>/archives/77770c79.html</url>
+    <content><![CDATA[<h1 id="一切的开始"><a href="#一切的开始" class="headerlink" title="一切的开始"></a>一切的开始</h1><a id="more"></a>
+<p><del>梦开始的地方</del></p>
+<p>第一篇，还是老规矩，HelloWorld~</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="380" height="126" src="//music.163.com/outchain/player?type=2&id=446944042&auto=0&height=106"></iframe>
+]]></content>
       <categories>
-        <category>学习</category>
+        <category>随笔</category>
       </categories>
       <tags>
-        <tag>学习</tag>
-        <tag>日语</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[前端常见知识点（四）]]></title>
-    <url>%2Farchives%2F4adfd4ff.html</url>
-    <content type="text"><![CDATA[事件IE 的事件流叫做「事件冒泡」，是指事件开始的时候是由最具体的元素（文档中嵌套层次最深的那个节点），或者说，是距离事件发生的最近的节点接受，然后逐级向上传播到较为不具体的节点（document）。 而 Netscape （网景）团队提出的另外一种事件流叫做「事件捕获」，与事件冒泡刚好相反，事件捕获的思想是不太具体的节点应该更先接收到事件，最具体的节点最后接收到事件。 DOM 事件流「DOM 2 级事件」规定，事件流包括三个阶段：事件捕获、事件处理和事件冒泡阶段，并且在事件捕获的阶段，实际发生事件的节点不会接收到事件，事件从document到&lt;html&gt;再到&lt;body&gt;后就停止了，之后在目标节点上发生，并在事件处理中被看成是冒泡阶段的一部分，之后在冒泡阶段中，事件又传播回document。 事件对象事件对象event是一个 在触发 DOM 上的某个事件时产生的，包含所有与该事件有关的信息的 对象。例如： 12345678910111213&lt;html&gt; &lt;body&gt; &lt;div&gt; &lt;button id="btn"&gt;BUTTON&lt;/button&gt; &lt;/div&gt; &lt;script&gt; var btn = document.getElementById('btn') btn.onclick = (event) =&gt; &#123; console.log(event) &#125; &lt;/script&gt; &lt;/body&gt;&lt;/html&gt; 点击按钮，然后在 Chrome 浏览器的控制台里我们就可以看到event对象的所有信息了。比如事件的类型event.type（click），事件的目标（即导致事件产生的元素）event.target（button#btn）等。合理利用事件对象的这些属性帮助我们提升不少工作效率，例如使用target属性完成事件委托。 事件委托在「红宝书」中有这么一个例子： 1234567891011121314151617181920212223242526&lt;html&gt; &lt;body&gt; &lt;ul id="links"&gt; &lt;li id="goSomewhere"&gt;Go Somewhere&lt;/li&gt; &lt;li id="doSomething"&gt;Do doSomething&lt;/li&gt; &lt;li id="greet"&gt;Greet&lt;/li&gt; &lt;/ul&gt; &lt;script&gt; var links = document.getElementById('links') links.addEventListener('click', (event) =&gt; &#123; var target = event.target switch (target.id) &#123; case 'goSomewhere': location.href = 'anotherPage.html' break case 'doSomething': document.title = 'The Title Changed' break case 'greet': alert('Hello!') break &#125; &#125;) &lt;/script&gt; &lt;/body&gt;&lt;/html&gt; 在这个例子里，我们使用事件委托只为&lt;ul&gt;元素添加了一个onclick事件处理程序，由于事件冒泡的特点，&lt;ul&gt;就可以处理它的所有子节点&lt;li&gt;的事件，这样子，比取得每一个&lt;li&gt;元素并分别对齐添加事件要方便的多。 并且这种方式因为只取得了一个 DOM 元素，只添加了一个事件处理程序，所以占用的内存更少，所花的时间也更少。]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[前端常见知识点（三）]]></title>
-    <url>%2Farchives%2Ffdf2cd9a.html</url>
-    <content type="text"><![CDATA[作用域前面讲到闭包的时候，我们说闭包是「是指有权访问另一个函数作用域中的变量的函数」，那么所谓的「作用域」又是什么呢？ 什么是作用域？先来看一个例子： 123456var a = 'Hello!'function greet() &#123; console.log(a)&#125;greet() // Hello! 在这段代码中，我们在greet函数外部定义了一个变量a，函数greet首先在自己的作用域中查找变量a，没有找到后再在外部的全局作用域中查找，找到之后将其打印输出。 接下来是另外一个例子： 123456789var a = 'Hello!'function greet () &#123; var b = 'world!' console.log(b)&#125;greet() // world!console.log(a) // Hello!console.log(b) // ReferenceError: b is not defined 在这段代码中，我们在greet函数内部定义了一个变量b，调用greet函数能够正常将其打印输出，但是当我们在外部直接输出变量b的时候却报错了，也就是说，在全局作用域里，变量b是未定义的。 于是我们知道，JavaScript 的作用域是通过函数来实现的，在函数内部定义的变量，在函数的外部是不可以访问的。 在 ES6 的let、const关键字提出来之前，JavaScript 的作用域只有两种：「全局作用域」和「函数（局部）作用域」。JavaScript 是没有「块作用域」的。 作用域链依旧是第一个例子： 123456var a = 'Hello!'function greet() &#123; console.log(a)&#125;greet() // Hello! 我们查找变量a的过程是：首先在函数greet的作用域中查找，之后到函数的上一层（这里是全局）作用域中查找，这样逐步向外查找的过程形成一个链条，就称作「作用域链」。 下面来看一个例子： 123456789101112var a = 'window'function outter () &#123; var a = 'outter' function inner () &#123; var a = 'inner' console.log(a) &#125; inner() // inner console.log(a)&#125;outter() // outterconsole.log(a) // window 如果把inner函数中的a的定义注释掉，那么ineer()的输出就是outter；如果再把outter函数中的a定义注释掉，那么三个输出就全都是window；这里的作用域链就是inner-&gt;outter-&gt;window（全局）。 延长作用域链尽管在 JavaScript 中，作用域只有全局和局部（函数）两种，但是作用域链可能会在某些情况下得到加长。 try-catch语句的catch块； with语句。 在「红宝书」中有一个 with语句的例子： 12345678function buildUrl () &#123; var qs = "?debyg=true" with (location) &#123; var url = href + qs &#125; return url&#125;console.log(buildUrl()) 在这个例子中，with语句接受到的是location对象，因此其变量对象中就包含了location对象的所有属性和方法，而这个变量对象被临时添加到了作用域链的前端，作用域链就变成了：location对象-&gt;buildUrl的变量对象-&gt;windows全局对象，于是当在with语句中引用变量href时，实际引用的就是location.href。 至于try-catch语句： 12345try &#123; doSomething()&#125; catch (error) &#123; handleError(error)&#125; 对于catch语句来说，会创建一个包含着被抛出的错误对象的声明的新的变量对象，并将其置于作用域链的头部，当catch语句块的代码执行完，会移除该变量对象，销毁作用域。]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[前端常见知识点（二）]]></title>
-    <url>%2Farchives%2Fb0ec6ec8.html</url>
-    <content type="text"><![CDATA[继承原型链根据「红宝书」中的描述，原型链是实现继承的主要方法。其原理是利用原型让一个引用类型继承另一个引用类型的属性和方法。 例如： 12345678910111213141516function Father () &#123; this.name = 'F'&#125;Father.prototype.getFatherName = function () &#123; return this.name&#125;function Son () &#123; this.sonname = "S"&#125;// 创建 Father 实例，并将其赋给 Son.prototypeSon.prototype = new Father()Son.prototype.getSonName = function () &#123; return this.sonname&#125;var son1 = new Son()console.log(son1.getFatherName()) // F 上述代码实现了Son继承Father，其本质是重写Son的原型对象，并以Father的实例代之，这样，原本存在于Father实例中的属性和方法，现在也存在于Son.prototype中了。 同时的，所有函数的默认原型都是Object的实例，即可以看做是 1Father.prototype = new Object() 这样我们就有了「Son的原型对象中包含着指向Father原型的指针，Father的原型对象中又包含着指向Object原型的指针」，如此递进，形成了实例与原型的链，这就是原型链的基本概念。 但是所谓的「原型对象」又是什么呢？ 原型对象「红宝书」中说 无论什么时候，只要创建了一个新函数，就会根据一组特定的规则来为该函数创建一个prototype属性，这个属性指向函数的原型对象。 并且在默认情况下，所有的原型对象都会自动获得一个constructor（构造函数）属性，这个属性是一个指向prototype属性所在函数的指针。 例如： 1234function Father () &#123; this.name = 'F'&#125;Father.prototype.constructor // function Father() 倘若我们调用构造函数创建一个新实例： 1var father = new Father() 那么该实例的内部就会包含一个指针（内部属性），指向构造函数的原型对象。 在某些地方（Chrome，Firefox），我们可以这样访问它： 12father.__proto__ // Father.prototypefather.__proto__.constructor // function Father() 并且，这个连接存在于实例与构造函数的原型对象之间，而不是实例与构造函数之间。]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[前端常见知识点（一）]]></title>
-    <url>%2Farchives%2F80fa8210.html</url>
-    <content type="text"><![CDATA[闭包什么是闭包？常见的理解，用「红宝书」中的话说就是：闭包是指有权访问另一个函数作用域中的变量的函数。创建闭包的常见方式就是在一个函数内部创建另一个函数。 例如： 12345678function greetFunc () &#123; var greet = 'Hello!' function foo () &#123; console.log(greet) &#125; foo()&#125;greetFunc() // greet 在这段代码中，函数foo()成功打印出了在其父函数中定义的greet变量的值，这就形成了一个闭包。 闭包有什么用？常见的理解，闭包一般用来「间接」访问一个变量，或者说，「隐藏」一个变量。 例如： 12345678910111213function greetFunc() &#123; var greet = 'Hello!' this.getGreet = function () &#123; return greet; &#125; this.setGreet = function (value) &#123; greet = value &#125;&#125;var foo = new greetFunc()console.log(foo.getGreet()) // Hello!foo.setGreet('Bonjour!')console.log(foo.getGreet()) // Bonjour! 这样，在greetFunc()函数外部，我们就可以通过get和set方法来访问函数内部的变量greet了。]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[C++ 解决八数码问题]]></title>
-    <url>%2Farchives%2F8c98d183.html</url>
-    <content type="text"><![CDATA[关于八数码问题，网上搜索一下就能有详细说明，在此不做赘述。 简单点说就是将类似下图所示的状态 2 8 3 1 4 7 6 5 通过与空格进行交换，达到类似如下所示的状态 1 2 3 8 4 7 6 5 在这个算法里空格当做数字 0 处理。 算法整体思路将每一个九宫格当做一个状态，每次移动一个数字就会生成一个新的状态，若新状态与最终状态相等，则表示解找到。 从初始状态开始，可构造一棵状态生成树，遍历这棵生成树找到目标状态即可。 注意：八数码问题不是始终有解的，只有初始状态的逆序数与终了状态的逆序数奇偶性相同才有解，否则无解，所以开始要做是否有解的判别。 1234567891011121314151617181920212223242526int getInversions(vector&lt;int&gt; num)&#123;// 求逆序数 int count = 0; for (int i = 0; i &lt; 9; i++) &#123; if (num[i] == 0) &#123; continue; &#125; for (int j = i; j &lt; 9; j++) &#123; if (num[j] != 0 &amp;&amp; num[i] &gt; num[j]) &#123; count++; &#125; &#125; &#125; return count;&#125;bool hasSolution(vector&lt;int&gt; start, vector&lt;int&gt; end)&#123;// 判断逆序数奇偶性来决定是否有解 int inverStart, inverEnd; inverStart = getInversions(start); inverEnd = getInversions(end); return (inverStart % 2 == inverEnd % 2);&#125; 宽度优先搜索（又称广度优先搜索），即 BFS首先每一次的九宫格当做一个状态，即状态类： 12345678910111213141516class state&#123; public: vector&lt;int&gt; num; int nowId, parentId;// 自身 id 及父状态 id，用于输出路径 state(vector&lt;int&gt; num, int nowId, int parentId) &#123;// 构造函数 this-&gt;num = num; this-&gt;nowId = nowId; this-&gt;parentId = parentId; &#125; bool operator==(const state &amp;now) const &#123;// 重载 == 运算符判断两个状态是否相等 return isEqual(num, now.num); &#125;&#125;; 1234567891011bool isEqual(vector&lt;int&gt; start, vector&lt;int&gt; end)&#123; for (int i = 0; i &lt; 9; i++) &#123; if (start[i] != end[i]) &#123;// 只要有一个数字不同即不相等 return false; &#125; &#125; return true;&#125; 众所周知 BFS 算法需要借助一个队列实现： 123queue&lt;state&gt; open;vector&lt;state&gt; path;map&lt;vector&lt;int&gt;, bool&gt; close; open表即是状态队列，path表用于存储路径上的状态，close表用于判断一个状态是否被访问过。 BFS 算法函数： 12345678910111213141516171819202122232425262728293031323334353637383940414243int BFS(vector&lt;int&gt; start, vector&lt;int&gt; end)&#123; int id = 0, step = 0; vector&lt;int&gt; move = &#123;-1, -3, 1, 3&#125;;// 代表数字分别向左、上、右、下移动 open.push(state(start, id, id++)); while (!open.empty()) &#123;// 当 open 表非空时取队列头元素进行判断，并将生成的子状态加入队列尾部 state now = open.front(); open.pop(); path.push_back(now); close[now.num] = true;// 设置该状态已被访问 if (isEqual(now.num, end)) &#123; return path.size(); &#125; int zeroL = zeroLocation(now.num);// 找到数字 0 所在的的位置 int newLocation = 0; for (int i = 0; i &lt; 4; i++) &#123; newLocation = zeroL + move[i]; if (newLocation &gt; -1 &amp;&amp; newLocation &lt; 9 &amp;&amp; !(newLocation == 2 &amp;&amp; zeroL == 3) &amp;&amp; !(newLocation == 3 &amp;&amp; zeroL == 2) &amp;&amp; !(newLocation == 5 &amp;&amp; zeroL == 6) &amp;&amp; !(newLocation == 6 &amp;&amp; zeroL == 5)) &#123;// 判断数字移动后是否越界 swap(now.num[newLocation], now.num[zeroL]);// 对数字进行移动 state newState = state(now.num, id++, now.nowId); swap(now.num[newLocation], now.num[zeroL]); if (isEqual(newState.num, end)) &#123; path.push_back(newState); return path.size(); &#125; if (!close.count(newState.num)) &#123;// 若该状态不在 close 表中，即未被访问过 open.push(newState);// 新状态入队列 step++; &#125; &#125; &#125; &#125;&#125; 完整源代码详见 GitHub 启发式搜索启发式搜索 BFS 稍稍有些不同，主要在于启发式函数与启发式函数的选择。 启发式函数 f(x)=g(x)+h(x)其中 g(x) 表示目标状态到当前状态的代价，用当前状态节点的深度表示。 h(x) 表示当前状态到目标状态的估价，可以有很多选择，这里使用当前状态的位置与目标状态位置不同的数字个数表示。 这样每次就不必一次性扩展所有子节点，而是会尽量选择接近目标状态的节点去扩展。 12345678910111213141516int HX(vector&lt;int&gt; start, vector&lt;int&gt; end)&#123; int hX = 0; for (int i = 0; i &lt; 9; i++) &#123; if (start[i] != end[i]) &#123; hX++; &#125; &#125; return hX;&#125;int FX(state &amp;now)&#123; return now.hX + now.gX;&#125; 这次open表就无需使用队列来实现了 123vector&lt;state&gt; open;vector&lt;state&gt; path;map&lt;vector&lt;int&gt;, bool&gt; close; 每次只需要从open表中取出 f(x) 最小的状态节点进行子节点扩展即可。 启发式搜索主函数（大部分判断移动和扩展都与 BFS 算法相似） 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647int AStar(vector&lt;int&gt; start, vector&lt;int&gt; end)&#123; int id = 0; vector&lt;int&gt; move = &#123;-3, -1, 3, 1&#125;; open.push_back(state(start, HX(start, end), 0, HX(start, end), id, id++)); while (!open.empty()) &#123; auto min = min_element(open.begin(), open.end(), [](const state &amp;x, const state &amp;y)-&gt; bool &#123;// 寻找 open 表中 f(x) 最小的状态 return x.fX &lt; y.fX; &#125;); state now = *min; open.erase(min); path.push_back(now); close[now.num] = true; if (isEqual(now.num, end)) &#123; return now.gX; &#125; int zeroL = zeroLocation(now.num); int newLocation = 0; for (int i = 0; i &lt; 4; i++) &#123; newLocation = zeroL + move[i]; if (newLocation &gt; -1 &amp;&amp; newLocation &lt; 9 &amp;&amp; !(newLocation == 2 &amp;&amp; zeroL == 3) &amp;&amp; !(newLocation == 3 &amp;&amp; zeroL == 2) &amp;&amp; !(newLocation == 5 &amp;&amp; zeroL == 6) &amp;&amp; !(newLocation == 6 &amp;&amp; zeroL == 5)) &#123; swap(now.num[newLocation], now.num[zeroL]); state newState = state(now.num, 0, now.gX + 1, HX(now.num, end), id++, now.nowId); swap(now.num[newLocation], now.num[zeroL]); newState.fX = FX(newState); if (isEqual(newState.num, end)) &#123; path.push_back(newState); return newState.gX; &#125; if (!close.count(newState.num)) &#123; open.push_back(newState); &#125; &#125; &#125; &#125;&#125; 完整源代码]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>课程</tag>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Windows 下好用的软件]]></title>
-    <url>%2Farchives%2F7484639a.html</url>
-    <content type="text"><![CDATA[Windows 下一些好用的软件自用，备份 写作 Typora主题等 GitHub 支援 截图 PicPick Snipaste 文件 Listary Wox开源软件。GitHub 地址 看图 Honeyview 压缩 Bandizip 网速显示 TrafficMonitor开源软件。GitHub 地址 状态栏透明 TaskbarTool个人作品作者：浅陌兮。联系方式：&#x36;&#55;&#x35;&#57;&#x30;&#x33;&#x36;&#x33;&#x31;&#x40;&#113;&#113;&#x2e;&#x63;&#x6f;&#x6d;更新地址：百度云，密码：tpi2。 文件预览 QuickLook开源软件。GitHub 地址 应用卸载 Geek Uninstaller GIF 录制 ScreenToGif开源软件。GitHub 地址]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>备份</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Windows 下更改 Telegram Desktop 默认字体]]></title>
-    <url>%2Farchives%2Ffd45428c.html</url>
-    <content type="text"><![CDATA[备个份，方便以后好找。 感谢作者 ysc3839 github 链接地址 使用下载 TGFont.dll 并重命名为 winmm.dll，然后放在 Telegram 的文件夹里。 下载地址 配置初次运行时会创建 TGFont.json。 将中文字体更改为微软雅黑，我的配置如下： 1234567891011121314&#123; "fonts": &#123; "SimSun": &#123; "replace": "Microsoft YaHei UI", "#size": 0, "#width": 0, "#weight": 0, "#italic": false, "#underLine": false, "#strikeOut": false &#125; &#125;, "debug": false&#125;]]></content>
+    <title>Windows 下更改 Telegram Desktop 默认字体</title>
+    <url>/archives/fd45428c.html</url>
+    <content><![CDATA[<p>备个份，方便以后好找。</p>
+<a id="more"></a>
+<p>感谢作者 <a href="https://github.com/ysc3839" target="_blank" rel="noopener">ysc3839</a></p>
+<p><a href="https://github.com/ysc3839/TGFont" target="_blank" rel="noopener">github 链接地址</a></p>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>下载 <code>TGFont.dll</code> 并重命名为 <code>winmm.dll</code>，然后放在 Telegram 的文件夹里。</p>
+<p><a href="https://github.com/ysc3839/TGFont/releases" target="_blank" rel="noopener">下载地址</a></p>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>初次运行时会创建 <code>TGFont.json</code>。</p>
+<p>将中文字体更改为微软雅黑，我的配置如下：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"fonts"</span>: &#123;</span><br><span class="line">		<span class="attr">"SimSun"</span>: &#123;</span><br><span class="line">			<span class="attr">"replace"</span>: <span class="string">"Microsoft YaHei UI"</span>,</span><br><span class="line">			<span class="attr">"#size"</span>: <span class="number">0</span>,</span><br><span class="line">			<span class="attr">"#width"</span>: <span class="number">0</span>,</span><br><span class="line">			<span class="attr">"#weight"</span>: <span class="number">0</span>,</span><br><span class="line">			<span class="attr">"#italic"</span>: <span class="literal">false</span>,</span><br><span class="line">			<span class="attr">"#underLine"</span>: <span class="literal">false</span>,</span><br><span class="line">			<span class="attr">"#strikeOut"</span>: <span class="literal">false</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="attr">"debug"</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>技术</category>
       </categories>
       <tags>
         <tag>随笔</tag>
-        <tag>Windows</tag>
         <tag>备份</tag>
+        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[C++ 统计单词出现次数]]></title>
-    <url>%2Farchives%2F6dcb7056.html</url>
-    <content type="text"><![CDATA[前言咱们云计算课程的第一次实验：给定一英文文本文件 data.dat，编写 C 程序，读取文件中的内容，统计文件中出现次数最多的三个单词，并给出这三个单词的出现次数，同时输出程序运行的时间。（注： 这里不区分单词大小写，例如， he 与 He 当做是同一个单词计数） C 实在是不会用，直接用 C++ 好了……趴。 思路 思路其实并没有多复杂，第一反应就是用 map 了，用键值对存储单词及其对应的出现次数，然后按照键值对给 map 排序，最后输出出现次数排在前三位的单词及其次数。 由于 map 会区分单词大小写，即 HE，He，he，hE会被分开存储，于是就需要在输入单词之后将其都转化为小写，再存储进 map 里面。 实现包含的头文件123456789#include &lt;iostream&gt; //cout 输出流#include &lt;fstream&gt; //读取文件流 #include &lt;iomanip&gt; //控制输出格式#include &lt;map&gt; //存储单词#include &lt;vector&gt; //用于排序#include &lt;algorithm&gt; //sort 排序算法#include &lt;time.h&gt; //计算程序运行时间#include &lt;string&gt; //字符串操作#include &lt;cctype&gt; //过滤标点符号 map 的用法1234567891011map&lt;string, size_t&gt; wordCount; vector&lt;pair&lt;string, size_t&gt;&gt; wordVector; ifstream inFile; inFile.open("data.dat"); while (!inFile.eof()) &#123; inFile &gt;&gt; word; word = delePunct(word); word = toLower(word); wordCount[word]++; &#125; 这里使用map&lt;string, size_t&gt; wordCount;定义了一个名为wordCount的 map，其中第一个数据（关键字 key）为 string 类型，用于存储每一个单词，第二个数据（值 value ）为 size_t类型（C++ Primer 第五版 P375）。 注：在使用数组下标时，通常将其定义为 size_t类型，size_t是一种机器相关的无符号类型，它被设计得足够大 以便能够表示内存中任意对象的大小。（C++ Primer 第五版 P103） 接着通过while循环每次从inFile中输入一个单词，并将其去掉标点符号（delePunct()）和转换成小写（toLower()）之后，将其存入到map当中，并使其对应的值加 1 （若该单词不存在则会自动创建一个新的关键字）。 去掉标点符号123456789101112string delePunct(string word)&#123; string outword; for (int i = 0; i &lt; word.size(); i++) &#123; if (!ispunct(word[i])) &#123; outword = outword + word[i]; &#125; &#125; return outword;&#125; 将单词全部转换成小写12345678string toLower(string word)&#123; for (int i = 0; i &lt; word.size(); i++) &#123; word[i] = tolower(word[i]); &#125; return word;&#125; 使用 for 循环输出 map12345for (auto &amp;w : wordCount) &#123; cout &lt;&lt; left &lt;&lt; setw(20) &lt;&lt; w.first &lt;&lt; "\t" &lt;&lt; w.second &lt;&lt; ((w.second &gt; 1)? " times" : " time") &lt;&lt; endl; &#125; 将 map 按值排序并输出12345678910111213void sortByValue(map&lt;string, size_t&gt; &amp;wordMap, vector&lt;pair&lt;string, size_t&gt;&gt; &amp;wordVector)&#123; for (auto &amp;iter : wordMap) &#123; wordVector.push_back(make_pair(iter.first, iter.second)); &#125; sort(wordVector.begin(), wordVector.end(), compare); for (auto iter = wordVector.begin(); iter &lt; (wordVector.begin() + 3); iter++) &#123; cout &lt;&lt; left &lt;&lt; setw(20) &lt;&lt; iter-&gt;first &lt;&lt; "\t" &lt;&lt; iter-&gt;second &lt;&lt; ((iter-&gt;second &gt; 1) ? " times" : " time") &lt;&lt; endl; &#125;&#125; 值得注意的是，C++ 语言中的 map 默认按照 key 排序，并且也没有内建按值（value）排序的函数，所以我们需要将 map 中存储的 pair 对象存放在一个新建的 vector 中，然后再使用 vector 中的 sort 函数对其进行排序。vector 使用的 sort 函数中第三个参数 compare：1234bool compare(const pair&lt;string, size_t&gt; &amp;x, const pair&lt;string, size_t&gt; &amp;y)&#123; return x.second &gt; y.second;&#125; 完整源代码（并附有 Java 版本）]]></content>
+    <title>Windows 下好用的软件</title>
+    <url>/archives/7484639a.html</url>
+    <content><![CDATA[<p>Windows 下一些好用的软件<br>自用，备份</p>
+<a id="more"></a>
+<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><ul>
+<li><a href="https://typora.io/" target="_blank" rel="noopener">Typora</a><br>主题等 <a href="https://github.com/typora" target="_blank" rel="noopener">GitHub 支援</a></li>
+</ul>
+<h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><ul>
+<li><a href="https://picpick.app/zh/" target="_blank" rel="noopener">PicPick</a></li>
+<li><a href="https://zh.snipaste.com/" target="_blank" rel="noopener">Snipaste</a></li>
+</ul>
+<h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><ul>
+<li><a href="https://www.listary.com/" target="_blank" rel="noopener">Listary</a></li>
+<li><a href="http://www.wox.one/" target="_blank" rel="noopener">Wox</a><br>开源软件。<a href="https://github.com/Wox-launcher/Wox" target="_blank" rel="noopener">GitHub 地址</a></li>
+</ul>
+<h2 id="看图"><a href="#看图" class="headerlink" title="看图"></a>看图</h2><ul>
+<li><a href="https://cn.bandisoft.com/honeyview/" target="_blank" rel="noopener">Honeyview</a></li>
+</ul>
+<h2 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h2><ul>
+<li><a href="http://cn.bandisoft.com/" target="_blank" rel="noopener">Bandizip</a></li>
+</ul>
+<h2 id="网速显示"><a href="#网速显示" class="headerlink" title="网速显示"></a>网速显示</h2><ul>
+<li>TrafficMonitor<br>开源软件。<a href="https://github.com/zhongyang219/TrafficMonitor" target="_blank" rel="noopener">GitHub 地址</a></li>
+</ul>
+<h2 id="状态栏透明"><a href="#状态栏透明" class="headerlink" title="状态栏透明"></a>状态栏透明</h2><ul>
+<li>TaskbarTool<br>个人作品<br>作者：浅陌兮。<br>联系方式：<a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x36;&#55;&#53;&#57;&#x30;&#x33;&#54;&#51;&#49;&#64;&#113;&#x71;&#x2e;&#99;&#x6f;&#x6d;">&#x36;&#55;&#53;&#57;&#x30;&#x33;&#54;&#51;&#49;&#64;&#113;&#x71;&#x2e;&#99;&#x6f;&#x6d;</a><br>更新地址：<a href="https://yun.baidu.com/s/1dFNAfpZ" target="_blank" rel="noopener">百度云</a>，密码：tpi2。</li>
+</ul>
+<h2 id="文件预览"><a href="#文件预览" class="headerlink" title="文件预览"></a>文件预览</h2><ul>
+<li><a href="https://pooi.moe/QuickLook/" target="_blank" rel="noopener">QuickLook</a><br>开源软件。<a href="https://github.com/QL-Win/QuickLook" target="_blank" rel="noopener">GitHub 地址</a></li>
+</ul>
+<h2 id="应用卸载"><a href="#应用卸载" class="headerlink" title="应用卸载"></a>应用卸载</h2><ul>
+<li><a href="https://geekuninstaller.com" target="_blank" rel="noopener">Geek Uninstaller</a></li>
+</ul>
+<h2 id="GIF-录制"><a href="#GIF-录制" class="headerlink" title="GIF 录制"></a>GIF 录制</h2><ul>
+<li><a href="https://www.screentogif.com/" target="_blank" rel="noopener">ScreenToGif</a><br>开源软件。<a href="https://github.com/NickeManarin/ScreenToGif" target="_blank" rel="noopener">GitHub 地址</a></li>
+</ul>
+]]></content>
       <categories>
-        <category>学习</category>
+        <category>技术</category>
       </categories>
       <tags>
-        <tag>学习</tag>
-        <tag>课程</tag>
-        <tag>C++</tag>
+        <tag>备份</tag>
+        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hexo-next 基础配置]]></title>
-    <url>%2Farchives%2F31053b28.html</url>
-    <content type="text"><![CDATA[Hexo-next 主题的配置文件位于/themes/next/_config.yml，大部分情况下只需要修改这个文件即可。 修改网站图标12345favicon: small: /images/favicon-16x16-next.png medium: /images/favicon-32x32-next.png apple_touch_icon: /images/apple-touch-icon-next.png safari_pinned_tab: /images/logo.svg 将你想要更改的图标文件放在/source/目录（推荐）或者hexo-site/themes/next/source/images/目录替换同名文件即可。 增加（或删除）“标签”、“分类”等在网站所在文件夹执行 1hexo new page tags 即可添加标签页面（分类同理hexo new page categories） 对应 next 主题配置文件 123456789menu: home: / || home #about: /about/ || user tags: /tags/ || tags categories: /categories/ || th archives: /archives/ || archive #schedule: /schedule/ || calendar #sitemap: /sitemap.xml || sitemap #commonweal: /404/ || heartbeat 添加友链1234567# Blog rollslinks_icon: linklinks_title: Friendslinks_layout: block#links_layout: inlinelinks: 沚水的小窝: http://blog.zsakvo.cc/ 设置自己头像1avatar: /images/avatar.jpg 侧边栏增加自己社交账号1234567891011social: GitHub: https://github.com/zsgdyf || github #E-Mail: mailto:yourname@gmail.com || envelope #Google: https://plus.google.com/yourname || google Twitter: https://twitter.com/zsgdyf || twitter #FB Page: https://www.facebook.com/yourname || facebook #VK Group: https://vk.com/yourname || vk #StackOverflow: https://stackoverflow.com/yourname || stack-overflow #YouTube: https://youtube.com/yourname || youtube #Instagram: https://instagram.com/yourname || instagram #Skype: skype:yourname?call|chat || skype 文章字数统计安装字数统计插件 1npm i --save hexo-wordcount 然后打开主题配置 123456post_wordcount: item_text: true wordcount: true min2read: false totalcount: true separated_meta: true 打开 post.swig 文件，/themes/next/layout/_macro/post.swig 找到如下代码： 123&lt;span title=&quot;&#123;&#123; __(&apos;post.wordcount&apos;) &#125;&#125;&quot;&gt; &#123;&#123; wordcount(post.content) &#125;&#125;&lt;/span&gt; 修改为： 123&lt;span title=&quot;&#123;&#123; __(&apos;post.wordcount&apos;) &#125;&#125;&quot;&gt; &#123;&#123; wordcount(post.content) &#125;&#125; 字&lt;/span&gt; 同理修改阅读时长，修改为： 123&lt;span title=&quot;&#123;&#123; __(&apos;post.min2read&apos;) &#125;&#125;&quot;&gt; &#123;&#123; min2read(post.content) &#125;&#125; 分钟&lt;/span&gt; 修改字体大小找到 base.styl 文件，/themes/next/source/css/_variables/base.styl 找到如下代码 1234567891011121314151617// Font size$font-size-base = 16px$font-size-base = unit(hexo-config(&apos;font.global.size&apos;), px) if hexo-config(&apos;font.global.size&apos;) is a &apos;unit&apos;$font-size-small = $font-size-base - 2px$font-size-smaller = $font-size-base - 4px$font-size-large = $font-size-base + 2px$font-size-larger = $font-size-base + 4px// Headings font size$font-size-headings-step = 2px$font-size-headings-base = 25px$font-size-headings-base = unit(hexo-config(&apos;font.headings.size&apos;), px) if hexo-config(&apos;font.headings.size&apos;) is a &apos;unit&apos;$font-size-headings-small = $font-size-headings-base - $font-size-headings-step$font-size-headings-smaller = $font-size-headings-small - $font-size-headings-step$font-size-headings-large = $font-size-headings-base + $font-size-headings-step$font-size-headings-larger = $font-size-headings-large + $font-size-headings-step 修改其中的font-size-base即可。 增加站内搜索在网站所在文件夹执行 1npm install hexo-generator-search --save 添加搜索功能 接着修改主题配置文件为 12local_search: enable: true]]></content>
+    <title>Hexo-next 基础配置</title>
+    <url>/archives/31053b28.html</url>
+    <content><![CDATA[<p>Hexo-next 主题的配置文件位于<code>/themes/next/_config.yml</code>，<br>大部分情况下只需要修改这个文件即可。</p>
+<a id="more"></a>
+<h1 id="修改网站图标"><a href="#修改网站图标" class="headerlink" title="修改网站图标"></a>修改网站图标</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: /images/favicon-16x16-next.png</span><br><span class="line">  medium: /images/favicon-32x32-next.png</span><br><span class="line">  apple_touch_icon: /images/apple-touch-icon-next.png</span><br><span class="line">  safari_pinned_tab: /images/logo.svg</span><br></pre></td></tr></table></figure>
+<p>将你想要更改的图标文件放在<code>/source/</code>目录（推荐）或者<code>hexo-site/themes/next/source/images/</code>目录替换同名文件即可。</p>
+<h1 id="增加（或删除）“标签”、“分类”等"><a href="#增加（或删除）“标签”、“分类”等" class="headerlink" title="增加（或删除）“标签”、“分类”等"></a>增加（或删除）“标签”、“分类”等</h1><p>在网站所在文件夹执行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>即可添加标签页面<br>（分类同理<code>hexo new page categories</code>）</p>
+<p>对应 next 主题配置文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home</span><br><span class="line">  #about: /about/ || user</span><br><span class="line">  tags: /tags/ || tags</span><br><span class="line">  categories: /categories/ || th</span><br><span class="line">  archives: /archives/ || archive</span><br><span class="line">  #schedule: /schedule/ || calendar</span><br><span class="line">  #sitemap: /sitemap.xml || sitemap</span><br><span class="line">  #commonweal: /404/ || heartbeat</span><br></pre></td></tr></table></figure>
+<h1 id="添加友链"><a href="#添加友链" class="headerlink" title="添加友链"></a>添加友链</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Blog rolls</span><br><span class="line">links_icon: link</span><br><span class="line">links_title: Friends</span><br><span class="line">links_layout: block</span><br><span class="line">#links_layout: inline</span><br><span class="line">links:</span><br><span class="line">   沚水的小窝: http://blog.zsakvo.cc/</span><br></pre></td></tr></table></figure>
+<h1 id="设置自己头像"><a href="#设置自己头像" class="headerlink" title="设置自己头像"></a>设置自己头像</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: /images/avatar.jpg</span><br></pre></td></tr></table></figure>
+<h1 id="侧边栏增加自己社交账号"><a href="#侧边栏增加自己社交账号" class="headerlink" title="侧边栏增加自己社交账号"></a>侧边栏增加自己社交账号</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/zsgdyf || github</span><br><span class="line">  #E-Mail: mailto:yourname@gmail.com || envelope</span><br><span class="line">  #Google: https://plus.google.com/yourname || google</span><br><span class="line">  Twitter: https://twitter.com/zsgdyf || twitter</span><br><span class="line">  #FB Page: https://www.facebook.com/yourname || facebook</span><br><span class="line">  #VK Group: https://vk.com/yourname || vk</span><br><span class="line">  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow</span><br><span class="line">  #YouTube: https://youtube.com/yourname || youtube</span><br><span class="line">  #Instagram: https://instagram.com/yourname || instagram</span><br><span class="line">  #Skype: skype:yourname?call|chat || skype</span><br></pre></td></tr></table></figure>
+<h1 id="文章字数统计"><a href="#文章字数统计" class="headerlink" title="文章字数统计"></a>文章字数统计</h1><p>安装字数统计插件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i --save hexo-wordcount</span><br></pre></td></tr></table></figure>
+<p>然后打开主题配置</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">post_wordcount:</span><br><span class="line"> item_text: true</span><br><span class="line"> wordcount: true</span><br><span class="line"> min2read: false</span><br><span class="line"> totalcount: true</span><br><span class="line"> separated_meta: true</span><br></pre></td></tr></table></figure>
+<p>打开 post.swig 文件，<code>/themes/next/layout/_macro/post.swig</code></p>
+<p>找到如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;span title=&quot;&#123;&#123; __(&apos;post.wordcount&apos;) &#125;&#125;&quot;&gt;</span><br><span class="line">    &#123;&#123; wordcount(post.content) &#125;&#125;</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;span title=&quot;&#123;&#123; __(&apos;post.wordcount&apos;) &#125;&#125;&quot;&gt;</span><br><span class="line">    &#123;&#123; wordcount(post.content) &#125;&#125; 字</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<p>同理修改阅读时长，修改为：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;span title=&quot;&#123;&#123; __(&apos;post.min2read&apos;) &#125;&#125;&quot;&gt;</span><br><span class="line">    &#123;&#123; min2read(post.content) &#125;&#125; 分钟</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="修改字体大小"><a href="#修改字体大小" class="headerlink" title="修改字体大小"></a>修改字体大小</h1><p>找到 base.styl 文件，<code>/themes/next/source/css/_variables/base.styl</code></p>
+<p>找到如下代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">// Font size</span><br><span class="line">$font-size-base           = 16px</span><br><span class="line">$font-size-base           = unit(hexo-config(&apos;font.global.size&apos;), px) if hexo-config(&apos;font.global.size&apos;) is a &apos;unit&apos;</span><br><span class="line">$font-size-small          = $font-size-base - 2px</span><br><span class="line">$font-size-smaller        = $font-size-base - 4px</span><br><span class="line">$font-size-large          = $font-size-base + 2px</span><br><span class="line">$font-size-larger         = $font-size-base + 4px</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// Headings font size</span><br><span class="line">$font-size-headings-step    = 2px</span><br><span class="line">$font-size-headings-base    = 25px</span><br><span class="line">$font-size-headings-base    = unit(hexo-config(&apos;font.headings.size&apos;), px) if hexo-config(&apos;font.headings.size&apos;) is a &apos;unit&apos;</span><br><span class="line">$font-size-headings-small   = $font-size-headings-base - $font-size-headings-step</span><br><span class="line">$font-size-headings-smaller = $font-size-headings-small - $font-size-headings-step</span><br><span class="line">$font-size-headings-large   = $font-size-headings-base + $font-size-headings-step</span><br><span class="line">$font-size-headings-larger  = $font-size-headings-large + $font-size-headings-step</span><br></pre></td></tr></table></figure>
+<p>修改其中的<code>font-size-base</code>即可。</p>
+<h1 id="增加站内搜索"><a href="#增加站内搜索" class="headerlink" title="增加站内搜索"></a>增加站内搜索</h1><p>在网站所在文件夹执行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
+<p>添加搜索功能</p>
+<p>接着修改主题配置文件为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>技术</category>
       </categories>
@@ -124,9 +128,257 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[心血来潮]]></title>
-    <url>%2Farchives%2F5be9a4c2.html</url>
-    <content type="text"><![CDATA[心血来潮想画一张表 虽然不知道具体想要表示什么……但总感觉应该就是这个样子的没错儿w 数据真的没有实际意义 数值都是咱瞎编的（逃~）]]></content>
+    <title>C++ 统计单词出现次数</title>
+    <url>/archives/6dcb7056.html</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>咱们云计算课程的第一次实验：给定一英文文本文件 data.dat，编写 C 程序，读取文件中的内容，统计文件中出现次数最多的三个单词，并给出这三个单词的出现次数，同时输出程序运行的时间。（注： 这里不区分单词大小写，例如， he 与 He 当做是同一个单词计数）</p>
+<p>C 实在是不会用，直接用 C++ 好了……趴。</p>
+<a id="more"></a>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><ol>
+<li><p>思路其实并没有多复杂，第一反应就是用 map 了，用键值对存储单词及其对应的出现次数，然后按照键值对给 map 排序，最后输出出现次数排在前三位的单词及其次数。</p>
+</li>
+<li><p>由于 map 会区分单词大小写，即 HE，He，he，hE会被分开存储，于是就需要在输入单词之后将其都转化为小写，再存储进 map 里面。</p>
+</li>
+</ol>
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><h2 id="包含的头文件"><a href="#包含的头文件" class="headerlink" title="包含的头文件"></a>包含的头文件</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt; //cout 输出流</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt; //读取文件流 </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt; //控制输出格式</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;  //存储单词</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt; //用于排序</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt; //sort 排序算法</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt; //计算程序运行时间</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt; //字符串操作</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cctype&gt; //过滤标点符号</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="map-的用法"><a href="#map-的用法" class="headerlink" title="map 的用法"></a>map 的用法</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="keyword">size_t</span>&gt; wordCount;</span><br><span class="line">    <span class="built_in">vector</span>&lt;pair&lt;<span class="built_in">string</span>, <span class="keyword">size_t</span>&gt;&gt; wordVector;</span><br><span class="line">    ifstream inFile;</span><br><span class="line">    inFile.open(<span class="string">"data.dat"</span>);</span><br><span class="line">    <span class="keyword">while</span> (!inFile.eof())</span><br><span class="line">    &#123;</span><br><span class="line">        inFile &gt;&gt; word;</span><br><span class="line">        word = delePunct(word);</span><br><span class="line">        word = toLower(word);</span><br><span class="line">        wordCount[word]++;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>这里使用<br><code>map&lt;string, size_t&gt; wordCount;</code><br>定义了一个名为<code>wordCount</code>的 <code>map</code>，其中第一个数据（关键字 <code>key</code>）为 <code>string</code> 类型，用于存储每一个单词，第二个数据（值 <code>value</code> ）为 <code>size_t</code>类型（C++ Primer 第五版 P375）。</p>
+<p><em>注：在使用数组下标时，通常将其定义为  <code>size_t</code>类型，<code>size_t</code>是一种机器相关的无符号类型，它被设计得足够大 以便能够表示内存中任意对象的大小。（C++ Primer 第五版  P103）</em></p>
+<p>接着通过<code>while</code>循环每次从<code>inFile</code>中输入一个单词，并将其去掉标点符号（<code>delePunct()</code>）和转换成小写（<code>toLower()</code>）之后，将其存入到<code>map</code>当中，并使其对应的值加 1 （若该单词不存在则会自动创建一个新的关键字）。</p>
+<h2 id="去掉标点符号"><a href="#去掉标点符号" class="headerlink" title="去掉标点符号"></a>去掉标点符号</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">delePunct</span><span class="params">(<span class="built_in">string</span> word)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> outword;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; word.size(); i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">ispunct</span>(word[i]))</span><br><span class="line">        &#123;</span><br><span class="line">            outword = outword + word[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> outword;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="将单词全部转换成小写"><a href="#将单词全部转换成小写" class="headerlink" title="将单词全部转换成小写"></a>将单词全部转换成小写</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">toLower</span><span class="params">(<span class="built_in">string</span> word)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; word.size(); i++)</span><br><span class="line">    &#123;</span><br><span class="line">        word[i] = <span class="built_in">tolower</span>(word[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> word;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="使用-for-循环输出-map"><a href="#使用-for-循环输出-map" class="headerlink" title="使用 for 循环输出 map"></a>使用 for 循环输出 map</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;w : wordCount)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; left &lt;&lt; setw(<span class="number">20</span>) &lt;&lt; w.first &lt;&lt; <span class="string">"\t"</span> &lt;&lt; w.second </span><br><span class="line">        &lt;&lt; ((w.second &gt; <span class="number">1</span>)? <span class="string">" times"</span> : <span class="string">" time"</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="将-map-按值排序并输出"><a href="#将-map-按值排序并输出" class="headerlink" title="将 map 按值排序并输出"></a>将 map 按值排序并输出</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sortByValue</span><span class="params">(<span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="keyword">size_t</span>&gt; &amp;wordMap, <span class="built_in">vector</span>&lt;pair&lt;<span class="built_in">string</span>, <span class="keyword">size_t</span>&gt;&gt; &amp;wordVector)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;iter : wordMap)</span><br><span class="line">    &#123;</span><br><span class="line">        wordVector.push_back(make_pair(iter.first, iter.second));</span><br><span class="line">    &#125;</span><br><span class="line">    sort(wordVector.begin(), wordVector.end(), compare);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> iter = wordVector.begin(); iter &lt; (wordVector.begin() + <span class="number">3</span>); iter++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; left &lt;&lt; setw(<span class="number">20</span>) &lt;&lt; iter-&gt;first &lt;&lt; <span class="string">"\t"</span> &lt;&lt; iter-&gt;second</span><br><span class="line">             &lt;&lt; ((iter-&gt;second &gt; <span class="number">1</span>) ? <span class="string">" times"</span> : <span class="string">" time"</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>值得注意的是，C++ 语言中的 <code>map</code> 默认按照 <code>key</code> 排序，并且也没有内建按值（<code>value</code>）排序的函数，所以我们需要将 <code>map</code> 中存储的 <code>pair</code> 对象存放在一个新建的 <code>vector</code> 中，然后再使用 <code>vector</code> 中的 <code>sort</code> 函数对其进行排序。<br><em><code>vector</code> 使用的 <code>sort</code> 函数中第三个参数 <code>compare</code>：</em><br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">compare</span><span class="params">(<span class="keyword">const</span> pair&lt;<span class="built_in">string</span>, <span class="keyword">size_t</span>&gt; &amp;x, <span class="keyword">const</span> pair&lt;<span class="built_in">string</span>, <span class="keyword">size_t</span>&gt; &amp;y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x.second &gt; y.second;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/zsgdyf/Git-For-Class/tree/master/CloudComputing" target="_blank" rel="noopener">完整源代码</a><br>（并附有 Java 版本）</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>课程</tag>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ 解决八数码问题</title>
+    <url>/archives/8c98d183.html</url>
+    <content><![CDATA[<p>关于八数码问题，网上搜索一下就能有详细说明，在此不做赘述。</p>
+<p>简单点说就是将类似下图所示的状态</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">2</th>
+<th style="text-align:center">8</th>
+<th style="text-align:center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>通过与空格进行交换，达到类似如下所示的状态</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>在这个算法里空格当做数字 0 处理。</p>
+<a id="more"></a>
+<h1 id="算法整体思路"><a href="#算法整体思路" class="headerlink" title="算法整体思路"></a>算法整体思路</h1><p>将每一个九宫格当做一个状态，每次移动一个数字就会生成一个新的状态，若新状态与最终状态相等，则表示解找到。</p>
+<p>从初始状态开始，可构造一棵状态生成树，遍历这棵生成树找到目标状态即可。</p>
+<p><em>注意：八数码问题不是始终有解的，只有初始状态的逆序数与终了状态的逆序数奇偶性相同才有解，否则无解，所以开始要做是否有解的判别。</em></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getInversions</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; num)</span></span></span><br><span class="line"><span class="function"></span>&#123;<span class="comment">// 求逆序数</span></span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (num[i] == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt; <span class="number">9</span>; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (num[j] != <span class="number">0</span> &amp;&amp; num[i] &gt; num[j])</span><br><span class="line">            &#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">hasSolution</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; start, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; end)</span></span></span><br><span class="line"><span class="function"></span>&#123;<span class="comment">// 判断逆序数奇偶性来决定是否有解</span></span><br><span class="line">    <span class="keyword">int</span> inverStart, inverEnd;</span><br><span class="line">    inverStart = getInversions(start);</span><br><span class="line">    inverEnd = getInversions(end);</span><br><span class="line">    <span class="keyword">return</span> (inverStart % <span class="number">2</span> == inverEnd % <span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="宽度优先搜索（又称广度优先搜索），即-BFS"><a href="#宽度优先搜索（又称广度优先搜索），即-BFS" class="headerlink" title="宽度优先搜索（又称广度优先搜索），即 BFS"></a>宽度优先搜索（又称广度优先搜索），即 BFS</h1><p>首先每一次的九宫格当做一个状态，即状态类：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">state</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; num;</span><br><span class="line">    <span class="keyword">int</span> nowId, parentId;<span class="comment">// 自身 id 及父状态 id，用于输出路径</span></span><br><span class="line">    state(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; num, <span class="keyword">int</span> nowId, <span class="keyword">int</span> parentId)</span><br><span class="line">    &#123;<span class="comment">// 构造函数</span></span><br><span class="line">        <span class="keyword">this</span>-&gt;num = num;</span><br><span class="line">        <span class="keyword">this</span>-&gt;nowId = nowId;</span><br><span class="line">        <span class="keyword">this</span>-&gt;parentId = parentId;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span>==(<span class="keyword">const</span> state &amp;now) <span class="keyword">const</span></span><br><span class="line">    &#123;<span class="comment">// 重载 == 运算符判断两个状态是否相等</span></span><br><span class="line">        <span class="keyword">return</span> isEqual(num, now.num);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isEqual</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; start, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; end)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (start[i] != end[i])</span><br><span class="line">        &#123;<span class="comment">// 只要有一个数字不同即不相等</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>众所周知 BFS 算法需要借助一个队列实现：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">queue</span>&lt;state&gt; open;</span><br><span class="line"><span class="built_in">vector</span>&lt;state&gt; path;</span><br><span class="line"><span class="built_in">map</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;, <span class="keyword">bool</span>&gt; close;</span><br></pre></td></tr></table></figure>
+<p><code>open</code>表即是状态队列，<code>path</code>表用于存储路径上的状态，<code>close</code>表用于判断一个状态是否被访问过。</p>
+<p>BFS 算法函数：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BFS</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; start, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; end)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> id = <span class="number">0</span>, step = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; move = &#123;<span class="number">-1</span>, <span class="number">-3</span>, <span class="number">1</span>, <span class="number">3</span>&#125;;<span class="comment">// 代表数字分别向左、上、右、下移动</span></span><br><span class="line">    open.push(state(start, id, id++));</span><br><span class="line">    <span class="keyword">while</span> (!open.empty())</span><br><span class="line">    &#123;<span class="comment">// 当 open 表非空时取队列头元素进行判断，并将生成的子状态加入队列尾部</span></span><br><span class="line">        state now = open.front();</span><br><span class="line">        open.pop();</span><br><span class="line">        path.push_back(now);</span><br><span class="line">        close[now.num] = <span class="literal">true</span>;<span class="comment">// 设置该状态已被访问</span></span><br><span class="line">        <span class="keyword">if</span> (isEqual(now.num, end))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> path.size();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> zeroL = zeroLocation(now.num);<span class="comment">// 找到数字 0 所在的的位置</span></span><br><span class="line">        <span class="keyword">int</span> newLocation = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            newLocation = zeroL + move[i];</span><br><span class="line">            <span class="keyword">if</span> (newLocation &gt; <span class="number">-1</span> &amp;&amp; newLocation &lt; <span class="number">9</span> </span><br><span class="line">            &amp;&amp; !(newLocation == <span class="number">2</span> &amp;&amp; zeroL == <span class="number">3</span>) </span><br><span class="line">            &amp;&amp; !(newLocation == <span class="number">3</span> &amp;&amp; zeroL == <span class="number">2</span>) </span><br><span class="line">            &amp;&amp; !(newLocation == <span class="number">5</span> &amp;&amp; zeroL == <span class="number">6</span>) </span><br><span class="line">            &amp;&amp; !(newLocation == <span class="number">6</span> &amp;&amp; zeroL == <span class="number">5</span>))</span><br><span class="line">            &#123;<span class="comment">// 判断数字移动后是否越界</span></span><br><span class="line">                swap(now.num[newLocation], now.num[zeroL]);<span class="comment">// 对数字进行移动</span></span><br><span class="line">                state newState = state(now.num, id++, now.nowId);</span><br><span class="line">                swap(now.num[newLocation], now.num[zeroL]);</span><br><span class="line">                <span class="keyword">if</span> (isEqual(newState.num, end))</span><br><span class="line">                &#123;</span><br><span class="line">                    path.push_back(newState);</span><br><span class="line">                    <span class="keyword">return</span> path.size();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (!close.count(newState.num))</span><br><span class="line">                &#123;<span class="comment">// 若该状态不在 close 表中，即未被访问过</span></span><br><span class="line">                    open.push(newState);<span class="comment">// 新状态入队列</span></span><br><span class="line">                    step++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/zsgdyf/Git-For-Class/blob/master/ArtificialIntelligence/BFS.cpp" target="_blank" rel="noopener">完整源代码详见 GitHub</a></p>
+<h1 id="启发式搜索"><a href="#启发式搜索" class="headerlink" title="启发式搜索"></a>启发式搜索</h1><p>启发式搜索 BFS 稍稍有些不同，主要在于启发式函数与启发式函数的选择。</p>
+<p>启发式函数 </p>
+<script type="math/tex; mode=display">
+f(x)=g(x)+h(x)</script><p>其中 <script type="math/tex">g(x)</script> 表示目标状态到当前状态的代价，用当前状态节点的深度表示。</p>
+<p><script type="math/tex">h(x)</script> 表示当前状态到目标状态的估价，可以有很多选择，这里使用当前状态的位置与目标状态位置不同的数字个数表示。</p>
+<p>这样每次就不必一次性扩展所有子节点，而是会尽量选择接近目标状态的节点去扩展。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">HX</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; start, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; end)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> hX = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (start[i] != end[i])</span><br><span class="line">        &#123;</span><br><span class="line">            hX++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> hX;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">FX</span><span class="params">(state &amp;now)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> now.hX + now.gX;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这次<code>open</code>表就无需使用队列来实现了</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;state&gt; open;</span><br><span class="line"><span class="built_in">vector</span>&lt;state&gt; path;</span><br><span class="line"><span class="built_in">map</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;, <span class="keyword">bool</span>&gt; close;</span><br></pre></td></tr></table></figure>
+<p>每次只需要从<code>open</code>表中取出 <script type="math/tex">f(x)</script> 最小的状态节点进行子节点扩展即可。</p>
+<p>启发式搜索主函数（大部分判断移动和扩展都与 BFS 算法相似）</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">AStar</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; start, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; end)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> id = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; move = &#123;<span class="number">-3</span>, <span class="number">-1</span>, <span class="number">3</span>, <span class="number">1</span>&#125;;</span><br><span class="line">    open.push_back(state(start, HX(start, end), <span class="number">0</span>, HX(start, end), id, id++));</span><br><span class="line">    <span class="keyword">while</span> (!open.empty())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">auto</span> min = min_element(open.begin(), open.end(), [](<span class="keyword">const</span> state &amp;x, <span class="keyword">const</span> state &amp;y)-&gt; <span class="keyword">bool</span> </span><br><span class="line">        &#123;<span class="comment">// 寻找 open 表中 f(x) 最小的状态</span></span><br><span class="line">            <span class="keyword">return</span> x.fX &lt; y.fX;</span><br><span class="line">        &#125;);</span><br><span class="line">        state now = *min;</span><br><span class="line">        open.erase(min);</span><br><span class="line">        path.push_back(now);</span><br><span class="line">        close[now.num] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (isEqual(now.num, end))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> now.gX;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> zeroL = zeroLocation(now.num);</span><br><span class="line">        <span class="keyword">int</span> newLocation = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            newLocation = zeroL + move[i];</span><br><span class="line">            <span class="keyword">if</span> (newLocation &gt; <span class="number">-1</span> &amp;&amp; newLocation &lt; <span class="number">9</span> </span><br><span class="line">            &amp;&amp; !(newLocation == <span class="number">2</span> &amp;&amp; zeroL == <span class="number">3</span>) </span><br><span class="line">            &amp;&amp; !(newLocation == <span class="number">3</span> &amp;&amp; zeroL == <span class="number">2</span>)</span><br><span class="line">            &amp;&amp; !(newLocation == <span class="number">5</span> &amp;&amp; zeroL == <span class="number">6</span>)</span><br><span class="line">            &amp;&amp; !(newLocation == <span class="number">6</span> &amp;&amp; zeroL == <span class="number">5</span>))</span><br><span class="line">            &#123;</span><br><span class="line">                swap(now.num[newLocation], now.num[zeroL]);</span><br><span class="line">                state newState = state(now.num, <span class="number">0</span>, now.gX + <span class="number">1</span>, HX(now.num, end), id++, now.nowId);</span><br><span class="line">                swap(now.num[newLocation], now.num[zeroL]);</span><br><span class="line">                newState.fX = FX(newState);</span><br><span class="line">                <span class="keyword">if</span> (isEqual(newState.num, end))</span><br><span class="line">                &#123;</span><br><span class="line">                    path.push_back(newState);</span><br><span class="line">                    <span class="keyword">return</span> newState.gX;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (!close.count(newState.num))</span><br><span class="line">                &#123;</span><br><span class="line">                    open.push_back(newState);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/zsgdyf/Git-For-Class/blob/master/ArtificialIntelligence/AStar.cpp" target="_blank" rel="noopener">完整源代码</a></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>课程</tag>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端常见知识点（一）</title>
+    <url>/archives/80fa8210.html</url>
+    <content><![CDATA[<h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><h2 id="什么是闭包？"><a href="#什么是闭包？" class="headerlink" title="什么是闭包？"></a>什么是闭包？</h2><p>常见的理解，用「红宝书」中的话说就是：<strong>闭包</strong>是指有权访问<strong>另一个函数作用域</strong>中的变量的<strong>函数</strong>。创建闭包的常见方式就是在一个函数内部创建另一个函数。</p>
+<a id="more"></a>
+<p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greetFunc</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> greet = <span class="string">'Hello!'</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">foo</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(greet)</span><br><span class="line">    &#125;</span><br><span class="line">    foo()</span><br><span class="line">&#125;</span><br><span class="line">greetFunc() <span class="comment">// greet</span></span><br></pre></td></tr></table></figure>
+<p>在这段代码中，函数<code>foo()</code>成功打印出了在其父函数中定义的<code>greet</code>变量的值，这就形成了一个闭包。</p>
+<h2 id="闭包有什么用？"><a href="#闭包有什么用？" class="headerlink" title="闭包有什么用？"></a>闭包有什么用？</h2><p>常见的理解，闭包一般用来「间接」访问一个变量，或者说，「隐藏」一个变量。</p>
+<p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greetFunc</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> greet = <span class="string">'Hello!'</span></span><br><span class="line">    <span class="keyword">this</span>.getGreet = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> greet;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.setGreet = <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">        greet = value</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> foo = <span class="keyword">new</span> greetFunc()</span><br><span class="line"><span class="built_in">console</span>.log(foo.getGreet()) <span class="comment">// Hello!</span></span><br><span class="line">foo.setGreet(<span class="string">'Bonjour!'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(foo.getGreet()) <span class="comment">// Bonjour!</span></span><br></pre></td></tr></table></figure>
+<p>这样，在<code>greetFunc()</code>函数外部，我们就可以通过<code>get</code>和<code>set</code>方法来访问函数内部的变量<code>greet</code>了。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端常见知识点（三）</title>
+    <url>/archives/fdf2cd9a.html</url>
+    <content><![CDATA[<h1 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h1><p>前面讲到闭包的时候，我们说闭包是「是指有权访问另一个函数<strong>作用域</strong>中的变量的函数」，那么所谓的「作用域」又是什么呢？</p>
+<a id="more"></a>
+<h2 id="什么是作用域？"><a href="#什么是作用域？" class="headerlink" title="什么是作用域？"></a>什么是作用域？</h2><p>先来看一个例子：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'Hello!'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br><span class="line">greet() <span class="comment">// Hello!</span></span><br></pre></td></tr></table></figure>
+<p>在这段代码中，我们在<code>greet</code>函数外部定义了一个变量<code>a</code>，函数<code>greet</code>首先在自己的<strong>作用域</strong>中查找变量<code>a</code>，没有找到后再在外部的全局<strong>作用域</strong>中查找，找到之后将其打印输出。</p>
+<p>接下来是另外一个例子：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'Hello!'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> b = <span class="string">'world!'</span></span><br><span class="line">    <span class="built_in">console</span>.log(b)</span><br><span class="line">&#125;</span><br><span class="line">greet() <span class="comment">// world!</span></span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">// Hello!</span></span><br><span class="line"><span class="built_in">console</span>.log(b) <span class="comment">// ReferenceError: b is not defined</span></span><br></pre></td></tr></table></figure>
+<p>在这段代码中，我们在<code>greet</code>函数内部定义了一个变量<code>b</code>，调用<code>greet</code>函数能够正常将其打印输出，但是当我们在外部直接输出变量<code>b</code>的时候却报错了，也就是说，在全局<strong>作用域</strong>里，变量<code>b</code>是未定义的。</p>
+<p>于是我们知道，JavaScript 的<strong>作用域</strong>是通过<strong>函数</strong>来实现的，在函数<strong>内部</strong>定义的变量，在函数的<strong>外部</strong>是不可以访问的。</p>
+<p>在 ES6 的<code>let</code>、<code>const</code>关键字提出来之前，JavaScript 的作用域只有两种：「全局作用域」和「函数（局部）作用域」。<strong>JavaScript 是没有「块作用域」的。</strong></p>
+<h2 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h2><p>依旧是第一个例子：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'Hello!'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br><span class="line">greet() <span class="comment">// Hello!</span></span><br></pre></td></tr></table></figure>
+<p>我们查找变量<code>a</code>的过程是：首先在函数<code>greet</code>的作用域中查找，之后到函数的上一层（这里是全局）作用域中查找，这样<strong>逐步向外</strong>查找的过程形成一个链条，就称作「作用域链」。</p>
+<p>下面来看一个例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'window'</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outter</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="string">'outter'</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">inner</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> a = <span class="string">'inner'</span></span><br><span class="line">        <span class="built_in">console</span>.log(a)</span><br><span class="line">    &#125;</span><br><span class="line">    inner() <span class="comment">// inner</span></span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br><span class="line">outter() <span class="comment">// outter</span></span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">// window</span></span><br></pre></td></tr></table></figure>
+<p>如果把<code>inner</code>函数中的<code>a</code>的定义注释掉，那么<code>ineer()</code>的输出就是<code>outter</code>；如果再把<code>outter</code>函数中的<code>a</code>定义注释掉，那么三个输出就全都是<code>window</code>；这里的作用域链就是<code>inner</code>-&gt;<code>outter</code>-&gt;<code>window</code>（全局）。</p>
+<h2 id="延长作用域链"><a href="#延长作用域链" class="headerlink" title="延长作用域链"></a>延长作用域链</h2><p>尽管在 JavaScript 中，作用域只有全局和局部（函数）两种，但是作用域链可能会在某些情况下得到加长。</p>
+<blockquote>
+<ol>
+<li><code>try-catch</code>语句的<code>catch</code>块；</li>
+<li><code>with</code>语句。</li>
+</ol>
+</blockquote>
+<p>在「红宝书」中有一个 <code>with</code>语句的例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">buildUrl</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> qs = <span class="string">"?debyg=true"</span></span><br><span class="line">    <span class="keyword">with</span> (location) &#123;</span><br><span class="line">        <span class="keyword">var</span> url = href + qs</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> url</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(buildUrl())</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，<code>with</code>语句接受到的是<code>location</code>对象，因此其变量对象中就包含了<code>location</code>对象的所有属性和方法，而这个变量对象被临时添加到了作用域链的前端，作用域链就变成了：<code>location</code>对象-&gt;<code>buildUrl</code>的变量对象-&gt;<code>windows</code>全局对象，于是当在<code>with</code>语句中引用变量<code>href</code>时，实际引用的就是<code>location.href</code>。</p>
+<p>至于<code>try-catch</code>语句：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    doSomething()</span><br><span class="line">&#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">    handleError(error)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对于<code>catch</code>语句来说，会创建一个包含着被抛出的错误对象的声明的新的变量对象，并将其置于作用域链的头部，当<code>catch</code>语句块的代码执行完，会移除该变量对象，销毁作用域。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端常见知识点（二）</title>
+    <url>/archives/b0ec6ec8.html</url>
+    <content><![CDATA[<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p>根据「红宝书」中的描述，<strong>原型链</strong>是实现继承的主要方法。其原理是利用<strong>原型</strong>让一个引用类型继承另一个引用类型的属性和方法。</p>
+<a id="more"></a>
+<p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">'F'</span></span><br><span class="line">&#125;</span><br><span class="line">Father.prototype.getFatherName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Son</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.sonname = <span class="string">"S"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 创建 Father 实例，并将其赋给 Son.prototype</span></span><br><span class="line">Son.prototype = <span class="keyword">new</span> Father()</span><br><span class="line">Son.prototype.getSonName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.sonname</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> son1 = <span class="keyword">new</span> Son()</span><br><span class="line"><span class="built_in">console</span>.log(son1.getFatherName()) <span class="comment">// F</span></span><br></pre></td></tr></table></figure>
+<p>上述代码实现了<code>Son</code>继承<code>Father</code>，其本质是重写<code>Son</code>的原型对象，并以<code>Father</code>的实例代之，这样，原本存在于<code>Father</code>实例中的属性和方法，现在也存在于<code>Son.prototype</code>中了。</p>
+<p>同时的，<strong>所有函数的默认原型都是<code>Object</code>的实例</strong>，即可以看做是</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Father.prototype = <span class="keyword">new</span> <span class="built_in">Object</span>()</span><br></pre></td></tr></table></figure>
+<p>这样我们就有了「<code>Son</code>的原型对象中包含着指向<code>Father</code>原型的指针，<code>Father</code>的原型对象中又包含着指向<code>Object</code>原型的指针」，如此递进，形成了实例与原型的链，这就是原型链的基本概念。</p>
+<p>但是所谓的「原型对象」又是什么呢？</p>
+<h2 id="原型对象"><a href="#原型对象" class="headerlink" title="原型对象"></a>原型对象</h2><p>「红宝书」中说</p>
+<blockquote>
+<p>无论什么时候，只要创建了一个新函数，就会根据一组特定的规则来为该函数创建一个<code>prototype</code>属性，这个属性指向函数的原型对象。</p>
+<p>并且在默认情况下，所有的原型对象都会自动获得一个<code>constructor</code>（构造函数）属性，这个属性是一个指向<code>prototype</code>属性所在函数的指针。</p>
+</blockquote>
+<p>例如：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">'F'</span></span><br><span class="line">&#125;</span><br><span class="line">Father.prototype.constructor <span class="comment">// function Father()</span></span><br></pre></td></tr></table></figure>
+<p>倘若我们调用构造函数创建一个新实例：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> father = <span class="keyword">new</span> Father()</span><br></pre></td></tr></table></figure>
+<p>那么该实例的内部就会包含一个指针（内部属性），指向构造函数的原型对象。</p>
+<p>在某些地方（Chrome，Firefox），我们可以这样访问它：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">father.__proto__ <span class="comment">// Father.prototype</span></span><br><span class="line">father.__proto__.constructor <span class="comment">// function Father()</span></span><br></pre></td></tr></table></figure>
+<p>并且，这个连接存在于实例与构造函数的<strong>原型对象</strong>之间，而不是实例与构造函数之间。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端常见知识点（四）</title>
+    <url>/archives/4adfd4ff.html</url>
+    <content><![CDATA[<h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><p>IE 的事件流叫做「事件冒泡」，是指事件开始的时候是由最具体的元素（文档中嵌套层次最深的那个节点），或者说，是距离事件发生的最近的节点接受，然后<strong>逐级向上</strong>传播到较为不具体的节点（<code>document</code>）。</p>
+<p>而 Netscape （网景）团队提出的另外一种事件流叫做「事件捕获」，与事件冒泡刚好相反，事件捕获的思想是不太具体的节点应该更先接收到事件，最具体的节点最后接收到事件。</p>
+<a id="more"></a>
+<h2 id="DOM-事件流"><a href="#DOM-事件流" class="headerlink" title="DOM 事件流"></a>DOM 事件流</h2><p>「DOM 2 级事件」规定，事件流包括三个阶段：<strong>事件捕获</strong>、<strong>事件处理</strong>和<strong>事件冒泡</strong>阶段，并且在事件捕获的阶段，实际发生事件的节点不会接收到事件，事件从<code>document</code>到<code>&lt;html&gt;</code>再到<code>&lt;body&gt;</code>后就停止了，之后在目标节点上发生，并在事件处理中被看成是冒泡阶段的一部分，之后在冒泡阶段中，事件又传播回<code>document</code>。</p>
+<h2 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h2><p>事件对象<code>event</code>是一个 在触发 DOM 上的某个事件时产生的，包含所有与该事件有关的信息的 对象。例如：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span>BUTTON<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>)</span></span><br><span class="line"><span class="javascript">            btn.onclick = <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(event)</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>点击按钮，然后在 Chrome 浏览器的控制台里我们就可以看到<code>event</code>对象的所有信息了。比如事件的类型<code>event.type</code>（<code>click</code>），事件的目标（即导致事件产生的元素）<code>event.target</code>（<code>button#btn</code>）等。合理利用事件对象的这些属性帮助我们提升不少工作效率，例如使用<code>target</code>属性完成事件委托。</p>
+<h2 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h2><p>在「红宝书」中有这么一个例子：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"links"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"goSomewhere"</span>&gt;</span>Go Somewhere<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"doSomething"</span>&gt;</span>Do doSomething<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"greet"</span>&gt;</span>Greet<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> links = <span class="built_in">document</span>.getElementById(<span class="string">'links'</span>)</span></span><br><span class="line"><span class="javascript">            links.addEventListener(<span class="string">'click'</span>, (event) =&gt; &#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> target = event.target</span></span><br><span class="line"><span class="javascript">                <span class="keyword">switch</span> (target.id) &#123;</span></span><br><span class="line"><span class="javascript">                    <span class="keyword">case</span> <span class="string">'goSomewhere'</span>:</span></span><br><span class="line"><span class="javascript">                        location.href = <span class="string">'anotherPage.html'</span></span></span><br><span class="line"><span class="javascript">                        <span class="keyword">break</span></span></span><br><span class="line"><span class="javascript">                    <span class="keyword">case</span> <span class="string">'doSomething'</span>:</span></span><br><span class="line"><span class="javascript">                        <span class="built_in">document</span>.title = <span class="string">'The Title Changed'</span></span></span><br><span class="line"><span class="javascript">                        <span class="keyword">break</span></span></span><br><span class="line"><span class="javascript">                    <span class="keyword">case</span> <span class="string">'greet'</span>:</span></span><br><span class="line"><span class="javascript">                        alert(<span class="string">'Hello!'</span>)</span></span><br><span class="line"><span class="javascript">                        <span class="keyword">break</span></span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="undefined">            &#125;)</span></span><br><span class="line"><span class="undefined">        </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在这个例子里，我们使用事件委托只为<code>&lt;ul&gt;</code>元素添加了一个<code>onclick</code>事件处理程序，由于事件冒泡的特点，<code>&lt;ul&gt;</code>就可以处理它的所有子节点<code>&lt;li&gt;</code>的事件，这样子，比取得每一个<code>&lt;li&gt;</code>元素并分别对齐添加事件要方便的多。</p>
+<p>并且这种方式因为只取得了一个 DOM 元素，只添加了一个事件处理程序，所以占用的内存更少，所花的时间也更少。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>心血来潮</title>
+    <url>/archives/5be9a4c2.html</url>
+    <content><![CDATA[<p>心血来潮想画一张表</p>
+<a id="more"></a>
+<p><img src="/images/SQsheet.jpg" alt="呐，一张表" title="呐，一张表"></p>
+<p>虽然不知道具体想要表示什么……<br>但总感觉应该就是这个样子的没错儿w</p>
+<p><del>数据真的没有实际意义</del></p>
+<p><del>数值都是咱瞎编的</del>（逃~）</p>
+]]></content>
       <categories>
         <category>随笔</category>
       </categories>
@@ -135,14 +387,63 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[HelloWorld]]></title>
-    <url>%2Farchives%2F77770c79.html</url>
-    <content type="text"><![CDATA[一切的开始 梦开始的地方 第一篇，还是老规矩，HelloWorld~]]></content>
+    <title>日语学习笔记（一） -- 「は」和「が」的区别</title>
+    <url>/archives/5aefdc5d.html</url>
+    <content><![CDATA[<h1 id="「は」と「が」の区別"><a href="#「は」と「が」の区別" class="headerlink" title="「は」と「が」の区別"></a>「は」と「が」の区別</h1><h2 id="强调的部分不同"><a href="#强调的部分不同" class="headerlink" title="强调的部分不同"></a>强调的部分不同</h2><p>「は」是强调「は」后面的部分，而「が」是强调「が」前面的部分。</p>
+<a id="more"></a>
+<p>例如：</p>
+<p>「A　は　B　です。」和「A　が　B　です。」</p>
+<p>前句强调的是 B ，而后句强调的是 A。</p>
+<p>实际语境看一下：</p>
+<blockquote>
+<p>-- お国はどちらですか？</p>
+<p>-- 私　は　日本人です。（强调是「日本人」）</p>
+</blockquote>
+<p>和</p>
+<blockquote>
+<p>-- 誰か日本人ですか？</p>
+<p>-- 私　が　日本人です。（强调「我」是）</p>
+</blockquote>
+<p>的区别。</p>
+<p>来源视频：<a href="https://www.bilibili.com/video/av33914825" target="_blank" rel="noopener">日本学霸给你讲解は和が的微妙区别</a></p>
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
+<iframe src="//player.bilibili.com/player.html?aid=33914825&cid=59393368&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe>
+</div>
+
+<h2 id="新信息和旧信息"><a href="#新信息和旧信息" class="headerlink" title="新信息和旧信息"></a>新信息和旧信息</h2><p>在标日P228页中对于「～が～です」的语法讲解中，提到「新信息做主语时用『が』来表示」，而在使用「A　は　B　です。」的表达的时候，A 是旧信息，B是新信息。</p>
+<p>书上给出的例子是：</p>
+<blockquote>
+<p>山田先生　は　どの方ですか？</p>
+<p>-- 山田先生　は　あの方です。</p>
+<p>-- あの方　が　山田先生です。</p>
+</blockquote>
+<p>并且还讲到，叙述直接观察到的某个事物，而不是作为话题在谈论这个事物时，使用「『名词』が『动词』」的形式，因为这里也同样是新信息在做主语。</p>
+<p>例如：</p>
+<blockquote>
+<p>子供　が　公園で遊んでいます。</p>
+<p>バス　が　来ました。</p>
+</blockquote>
+<p>以及我们熟悉的</p>
+<blockquote>
+<p>天気がいいです。</p>
+</blockquote>
+<p>所以按照这个观点，标日解释了为何「何」「誰」「何処」「何時」疑问词做主语时不能用「は」，只能用「が」，因为这些词不能表示旧信息。</p>
+<p>所以我们只能说</p>
+<blockquote>
+<p>誰　が　いますか？</p>
+</blockquote>
+<p>和</p>
+<blockquote>
+<p>何　が　すきですか？</p>
+</blockquote>
+]]></content>
       <categories>
-        <category>随笔</category>
+        <category>学习</category>
       </categories>
       <tags>
-        <tag>随笔</tag>
+        <tag>学习</tag>
+        <tag>日语</tag>
       </tags>
   </entry>
 </search>
