@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Hexo-next 基础配置 - 随缘</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="zsgdyf,"> 
+    <meta name="description" content="年轻人的第一个小站,Hexo-next 主题的配置文件位于/themes/next/_config.yml，大部分情况下只需要修改这个文件即可。
+
+修改网站图标12345favicon:  small: /images,"> 
+    <meta name="author" content="zsgdyf"> 
+    <link rel="alternative" href="atom.xml" title="随缘" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+</head>
+</html>
+<body class="loading">
+    <span id="config-title" style="display:none">随缘</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="https://zsgdyf.github.io"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">Hexo-next 基础配置</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">Hexo-next 基础配置</h1>
+        <div class="stuff">
+            <span>九月 26, 2018</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Hexo/">Hexo</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/学习/">学习</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <p>Hexo-next 主题的配置文件位于<code>/themes/next/_config.yml</code>，<br>大部分情况下只需要修改这个文件即可。</p>
+<a id="more"></a>
+<h1 id="修改网站图标"><a href="#修改网站图标" class="headerlink" title="修改网站图标"></a>修改网站图标</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: /images/favicon-16x16-next.png</span><br><span class="line">  medium: /images/favicon-32x32-next.png</span><br><span class="line">  apple_touch_icon: /images/apple-touch-icon-next.png</span><br><span class="line">  safari_pinned_tab: /images/logo.svg</span><br></pre></td></tr></table></figure>
+<p>将你想要更改的图标文件放在<code>/source/</code>目录（推荐）或者<code>hexo-site/themes/next/source/images/</code>目录替换同名文件即可。</p>
+<h1 id="增加（或删除）“标签”、“分类”等"><a href="#增加（或删除）“标签”、“分类”等" class="headerlink" title="增加（或删除）“标签”、“分类”等"></a>增加（或删除）“标签”、“分类”等</h1><p>在网站所在文件夹执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>即可添加标签页面<br>（分类同理<code>hexo new page categories</code>）</p>
+<p>对应 next 主题配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home</span><br><span class="line">  #about: /about/ || user</span><br><span class="line">  tags: /tags/ || tags</span><br><span class="line">  categories: /categories/ || th</span><br><span class="line">  archives: /archives/ || archive</span><br><span class="line">  #schedule: /schedule/ || calendar</span><br><span class="line">  #sitemap: /sitemap.xml || sitemap</span><br><span class="line">  #commonweal: /404/ || heartbeat</span><br></pre></td></tr></table></figure>
+<h1 id="添加友链"><a href="#添加友链" class="headerlink" title="添加友链"></a>添加友链</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Blog rolls</span><br><span class="line">links_icon: link</span><br><span class="line">links_title: Friends</span><br><span class="line">links_layout: block</span><br><span class="line">#links_layout: inline</span><br><span class="line">links:</span><br><span class="line">   沚水的小窝: http://blog.zsakvo.cc/</span><br></pre></td></tr></table></figure>
+<h1 id="设置自己头像"><a href="#设置自己头像" class="headerlink" title="设置自己头像"></a>设置自己头像</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">avatar: /images/avatar.jpg</span><br></pre></td></tr></table></figure>
+<h1 id="侧边栏增加自己社交账号"><a href="#侧边栏增加自己社交账号" class="headerlink" title="侧边栏增加自己社交账号"></a>侧边栏增加自己社交账号</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/zsgdyf || github</span><br><span class="line">  #E-Mail: mailto:yourname@gmail.com || envelope</span><br><span class="line">  #Google: https://plus.google.com/yourname || google</span><br><span class="line">  Twitter: https://twitter.com/zsgdyf || twitter</span><br><span class="line">  #FB Page: https://www.facebook.com/yourname || facebook</span><br><span class="line">  #VK Group: https://vk.com/yourname || vk</span><br><span class="line">  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow</span><br><span class="line">  #YouTube: https://youtube.com/yourname || youtube</span><br><span class="line">  #Instagram: https://instagram.com/yourname || instagram</span><br><span class="line">  #Skype: skype:yourname?call|chat || skype</span><br></pre></td></tr></table></figure>
+<h1 id="文章字数统计"><a href="#文章字数统计" class="headerlink" title="文章字数统计"></a>文章字数统计</h1><p>安装字数统计插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save hexo-wordcount</span><br></pre></td></tr></table></figure>
+<p>然后打开主题配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">post_wordcount:</span><br><span class="line"> item_text: true</span><br><span class="line"> wordcount: true</span><br><span class="line"> min2read: false</span><br><span class="line"> totalcount: true</span><br><span class="line"> separated_meta: true</span><br></pre></td></tr></table></figure>
+<p>打开 post.swig 文件，<code>/themes/next/layout/_macro/post.swig</code></p>
+<p>找到如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span title=&quot;&#123;&#123; __(&apos;post.wordcount&apos;) &#125;&#125;&quot;&gt;</span><br><span class="line">    &#123;&#123; wordcount(post.content) &#125;&#125;</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span title=&quot;&#123;&#123; __(&apos;post.wordcount&apos;) &#125;&#125;&quot;&gt;</span><br><span class="line">    &#123;&#123; wordcount(post.content) &#125;&#125; 字</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<p>同理修改阅读时长，修改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span title=&quot;&#123;&#123; __(&apos;post.min2read&apos;) &#125;&#125;&quot;&gt;</span><br><span class="line">    &#123;&#123; min2read(post.content) &#125;&#125; 分钟</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="修改字体大小"><a href="#修改字体大小" class="headerlink" title="修改字体大小"></a>修改字体大小</h1><p>找到 base.styl 文件，<code>/themes/next/source/css/_variables/base.styl</code></p>
+<p>找到如下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// Font size</span><br><span class="line">$font-size-base           = 16px</span><br><span class="line">$font-size-base           = unit(hexo-config(&apos;font.global.size&apos;), px) if hexo-config(&apos;font.global.size&apos;) is a &apos;unit&apos;</span><br><span class="line">$font-size-small          = $font-size-base - 2px</span><br><span class="line">$font-size-smaller        = $font-size-base - 4px</span><br><span class="line">$font-size-large          = $font-size-base + 2px</span><br><span class="line">$font-size-larger         = $font-size-base + 4px</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// Headings font size</span><br><span class="line">$font-size-headings-step    = 2px</span><br><span class="line">$font-size-headings-base    = 25px</span><br><span class="line">$font-size-headings-base    = unit(hexo-config(&apos;font.headings.size&apos;), px) if hexo-config(&apos;font.headings.size&apos;) is a &apos;unit&apos;</span><br><span class="line">$font-size-headings-small   = $font-size-headings-base - $font-size-headings-step</span><br><span class="line">$font-size-headings-smaller = $font-size-headings-small - $font-size-headings-step</span><br><span class="line">$font-size-headings-large   = $font-size-headings-base + $font-size-headings-step</span><br><span class="line">$font-size-headings-larger  = $font-size-headings-large + $font-size-headings-step</span><br></pre></td></tr></table></figure>
+<p>修改其中的<code>font-size-base</code>即可。</p>
+<h1 id="增加站内搜索"><a href="#增加站内搜索" class="headerlink" title="增加站内搜索"></a>增加站内搜索</h1><p>在网站所在文件夹执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
+<p>添加搜索功能</p>
+<p>接着修改主题配置文件为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
+                    
+                        <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci='6343f9028efd0476e771'
+        data-cs='d06ca503cc9e12a08d5323e3ead1f57b6512cff3'
+        data-r='zsgdyf.github.io'
+        data-o='zsgdyf'
+        data-a='zsgdyf'
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#修改网站图标"><span class="toc-number">1.</span> <span class="toc-text">修改网站图标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#增加（或删除）“标签”、“分类”等"><span class="toc-number">2.</span> <span class="toc-text">增加（或删除）“标签”、“分类”等</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#添加友链"><span class="toc-number">3.</span> <span class="toc-text">添加友链</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#设置自己头像"><span class="toc-number">4.</span> <span class="toc-text">设置自己头像</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#侧边栏增加自己社交账号"><span class="toc-number">5.</span> <span class="toc-text">侧边栏增加自己社交账号</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文章字数统计"><span class="toc-number">6.</span> <span class="toc-text">文章字数统计</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#修改字体大小"><span class="toc-number">7.</span> <span class="toc-text">修改字体大小</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#增加站内搜索"><span class="toc-number">8.</span> <span class="toc-text">增加站内搜索</span></a></li></ol>
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-126218656-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+</html>

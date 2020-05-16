@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[日语学习笔记（一） -- 「は」和「が」的区别]]></title>
+    <url>%2Farchives%2F5aefdc5d.html</url>
+    <content type="text"><![CDATA[「は」と「が」の区別强调的部分不同「は」是强调「は」后面的部分，而「が」是强调「が」前面的部分。 例如： 「A は B です。」和「A が B です。」 前句强调的是 B ，而后句强调的是 A。 实际语境看一下： -- お国はどちらですか？ -- 私 は 日本人です。（强调是「日本人」） 和 -- 誰か日本人ですか？ -- 私 が 日本人です。（强调「我」是） 的区别。 来源视频：日本学霸给你讲解は和が的微妙区别 新信息和旧信息在标日P228页中对于「～が～です」的语法讲解中，提到「新信息做主语时用『が』来表示」，而在使用「A は B です。」的表达的时候，A 是旧信息，B是新信息。 书上给出的例子是： 山田先生 は どの方ですか？ -- 山田先生 は あの方です。 -- あの方 が 山田先生です。 并且还讲到，叙述直接观察到的某个事物，而不是作为话题在谈论这个事物时，使用「『名词』が『动词』」的形式，因为这里也同样是新信息在做主语。 例如： 子供 が 公園で遊んでいます。 バス が 来ました。 以及我们熟悉的 天気がいいです。 所以按照这个观点，标日解释了为何「何」「誰」「何処」「何時」疑问词做主语时不能用「は」，只能用「が」，因为这些词不能表示旧信息。 所以我们只能说 誰 が いますか？ 和 何 が すきですか？]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>日语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[前端常见知识点（四）]]></title>
+    <url>%2Farchives%2F4adfd4ff.html</url>
+    <content type="text"><![CDATA[事件IE 的事件流叫做「事件冒泡」，是指事件开始的时候是由最具体的元素（文档中嵌套层次最深的那个节点），或者说，是距离事件发生的最近的节点接受，然后逐级向上传播到较为不具体的节点（document）。 而 Netscape （网景）团队提出的另外一种事件流叫做「事件捕获」，与事件冒泡刚好相反，事件捕获的思想是不太具体的节点应该更先接收到事件，最具体的节点最后接收到事件。 DOM 事件流「DOM 2 级事件」规定，事件流包括三个阶段：事件捕获、事件处理和事件冒泡阶段，并且在事件捕获的阶段，实际发生事件的节点不会接收到事件，事件从document到&lt;html&gt;再到&lt;body&gt;后就停止了，之后在目标节点上发生，并在事件处理中被看成是冒泡阶段的一部分，之后在冒泡阶段中，事件又传播回document。 事件对象事件对象event是一个 在触发 DOM 上的某个事件时产生的，包含所有与该事件有关的信息的 对象。例如： 12345678910111213&lt;html&gt; &lt;body&gt; &lt;div&gt; &lt;button id="btn"&gt;BUTTON&lt;/button&gt; &lt;/div&gt; &lt;script&gt; var btn = document.getElementById('btn') btn.onclick = (event) =&gt; &#123; console.log(event) &#125; &lt;/script&gt; &lt;/body&gt;&lt;/html&gt; 点击按钮，然后在 Chrome 浏览器的控制台里我们就可以看到event对象的所有信息了。比如事件的类型event.type（click），事件的目标（即导致事件产生的元素）event.target（button#btn）等。合理利用事件对象的这些属性帮助我们提升不少工作效率，例如使用target属性完成事件委托。 事件委托在「红宝书」中有这么一个例子： 1234567891011121314151617181920212223242526&lt;html&gt; &lt;body&gt; &lt;ul id="links"&gt; &lt;li id="goSomewhere"&gt;Go Somewhere&lt;/li&gt; &lt;li id="doSomething"&gt;Do doSomething&lt;/li&gt; &lt;li id="greet"&gt;Greet&lt;/li&gt; &lt;/ul&gt; &lt;script&gt; var links = document.getElementById('links') links.addEventListener('click', (event) =&gt; &#123; var target = event.target switch (target.id) &#123; case 'goSomewhere': location.href = 'anotherPage.html' break case 'doSomething': document.title = 'The Title Changed' break case 'greet': alert('Hello!') break &#125; &#125;) &lt;/script&gt; &lt;/body&gt;&lt;/html&gt; 在这个例子里，我们使用事件委托只为&lt;ul&gt;元素添加了一个onclick事件处理程序，由于事件冒泡的特点，&lt;ul&gt;就可以处理它的所有子节点&lt;li&gt;的事件，这样子，比取得每一个&lt;li&gt;元素并分别对齐添加事件要方便的多。 并且这种方式因为只取得了一个 DOM 元素，只添加了一个事件处理程序，所以占用的内存更少，所花的时间也更少。]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[前端常见知识点（三）]]></title>
+    <url>%2Farchives%2Ffdf2cd9a.html</url>
+    <content type="text"><![CDATA[作用域前面讲到闭包的时候，我们说闭包是「是指有权访问另一个函数作用域中的变量的函数」，那么所谓的「作用域」又是什么呢？ 什么是作用域？先来看一个例子： 123456var a = 'Hello!'function greet() &#123; console.log(a)&#125;greet() // Hello! 在这段代码中，我们在greet函数外部定义了一个变量a，函数greet首先在自己的作用域中查找变量a，没有找到后再在外部的全局作用域中查找，找到之后将其打印输出。 接下来是另外一个例子： 123456789var a = 'Hello!'function greet () &#123; var b = 'world!' console.log(b)&#125;greet() // world!console.log(a) // Hello!console.log(b) // ReferenceError: b is not defined 在这段代码中，我们在greet函数内部定义了一个变量b，调用greet函数能够正常将其打印输出，但是当我们在外部直接输出变量b的时候却报错了，也就是说，在全局作用域里，变量b是未定义的。 于是我们知道，JavaScript 的作用域是通过函数来实现的，在函数内部定义的变量，在函数的外部是不可以访问的。 在 ES6 的let、const关键字提出来之前，JavaScript 的作用域只有两种：「全局作用域」和「函数（局部）作用域」。JavaScript 是没有「块作用域」的。 作用域链依旧是第一个例子： 123456var a = 'Hello!'function greet() &#123; console.log(a)&#125;greet() // Hello! 我们查找变量a的过程是：首先在函数greet的作用域中查找，之后到函数的上一层（这里是全局）作用域中查找，这样逐步向外查找的过程形成一个链条，就称作「作用域链」。 下面来看一个例子： 123456789101112var a = 'window'function outter () &#123; var a = 'outter' function inner () &#123; var a = 'inner' console.log(a) &#125; inner() // inner console.log(a)&#125;outter() // outterconsole.log(a) // window 如果把inner函数中的a的定义注释掉，那么ineer()的输出就是outter；如果再把outter函数中的a定义注释掉，那么三个输出就全都是window；这里的作用域链就是inner-&gt;outter-&gt;window（全局）。 延长作用域链尽管在 JavaScript 中，作用域只有全局和局部（函数）两种，但是作用域链可能会在某些情况下得到加长。 try-catch语句的catch块； with语句。 在「红宝书」中有一个 with语句的例子： 12345678function buildUrl () &#123; var qs = "?debyg=true" with (location) &#123; var url = href + qs &#125; return url&#125;console.log(buildUrl()) 在这个例子中，with语句接受到的是location对象，因此其变量对象中就包含了location对象的所有属性和方法，而这个变量对象被临时添加到了作用域链的前端，作用域链就变成了：location对象-&gt;buildUrl的变量对象-&gt;windows全局对象，于是当在with语句中引用变量href时，实际引用的就是location.href。 至于try-catch语句： 12345try &#123; doSomething()&#125; catch (error) &#123; handleError(error)&#125; 对于catch语句来说，会创建一个包含着被抛出的错误对象的声明的新的变量对象，并将其置于作用域链的头部，当catch语句块的代码执行完，会移除该变量对象，销毁作用域。]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[前端常见知识点（二）]]></title>
+    <url>%2Farchives%2Fb0ec6ec8.html</url>
+    <content type="text"><![CDATA[继承原型链根据「红宝书」中的描述，原型链是实现继承的主要方法。其原理是利用原型让一个引用类型继承另一个引用类型的属性和方法。 例如： 12345678910111213141516function Father () &#123; this.name = 'F'&#125;Father.prototype.getFatherName = function () &#123; return this.name&#125;function Son () &#123; this.sonname = "S"&#125;// 创建 Father 实例，并将其赋给 Son.prototypeSon.prototype = new Father()Son.prototype.getSonName = function () &#123; return this.sonname&#125;var son1 = new Son()console.log(son1.getFatherName()) // F 上述代码实现了Son继承Father，其本质是重写Son的原型对象，并以Father的实例代之，这样，原本存在于Father实例中的属性和方法，现在也存在于Son.prototype中了。 同时的，所有函数的默认原型都是Object的实例，即可以看做是 1Father.prototype = new Object() 这样我们就有了「Son的原型对象中包含着指向Father原型的指针，Father的原型对象中又包含着指向Object原型的指针」，如此递进，形成了实例与原型的链，这就是原型链的基本概念。 但是所谓的「原型对象」又是什么呢？ 原型对象「红宝书」中说 无论什么时候，只要创建了一个新函数，就会根据一组特定的规则来为该函数创建一个prototype属性，这个属性指向函数的原型对象。 并且在默认情况下，所有的原型对象都会自动获得一个constructor（构造函数）属性，这个属性是一个指向prototype属性所在函数的指针。 例如： 1234function Father () &#123; this.name = 'F'&#125;Father.prototype.constructor // function Father() 倘若我们调用构造函数创建一个新实例： 1var father = new Father() 那么该实例的内部就会包含一个指针（内部属性），指向构造函数的原型对象。 在某些地方（Chrome，Firefox），我们可以这样访问它： 12father.__proto__ // Father.prototypefather.__proto__.constructor // function Father() 并且，这个连接存在于实例与构造函数的原型对象之间，而不是实例与构造函数之间。]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[前端常见知识点（一）]]></title>
+    <url>%2Farchives%2F80fa8210.html</url>
+    <content type="text"><![CDATA[闭包什么是闭包？常见的理解，用「红宝书」中的话说就是：闭包是指有权访问另一个函数作用域中的变量的函数。创建闭包的常见方式就是在一个函数内部创建另一个函数。 例如： 12345678function greetFunc () &#123; var greet = 'Hello!' function foo () &#123; console.log(greet) &#125; foo()&#125;greetFunc() // greet 在这段代码中，函数foo()成功打印出了在其父函数中定义的greet变量的值，这就形成了一个闭包。 闭包有什么用？常见的理解，闭包一般用来「间接」访问一个变量，或者说，「隐藏」一个变量。 例如： 12345678910111213function greetFunc() &#123; var greet = 'Hello!' this.getGreet = function () &#123; return greet; &#125; this.setGreet = function (value) &#123; greet = value &#125;&#125;var foo = new greetFunc()console.log(foo.getGreet()) // Hello!foo.setGreet('Bonjour!')console.log(foo.getGreet()) // Bonjour! 这样，在greetFunc()函数外部，我们就可以通过get和set方法来访问函数内部的变量greet了。]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[C++ 解决八数码问题]]></title>
+    <url>%2Farchives%2F8c98d183.html</url>
+    <content type="text"><![CDATA[关于八数码问题，网上搜索一下就能有详细说明，在此不做赘述。 简单点说就是将类似下图所示的状态 2 8 3 1 4 7 6 5 通过与空格进行交换，达到类似如下所示的状态 1 2 3 8 4 7 6 5 在这个算法里空格当做数字 0 处理。 算法整体思路将每一个九宫格当做一个状态，每次移动一个数字就会生成一个新的状态，若新状态与最终状态相等，则表示解找到。 从初始状态开始，可构造一棵状态生成树，遍历这棵生成树找到目标状态即可。 注意：八数码问题不是始终有解的，只有初始状态的逆序数与终了状态的逆序数奇偶性相同才有解，否则无解，所以开始要做是否有解的判别。 1234567891011121314151617181920212223242526int getInversions(vector&lt;int&gt; num)&#123;// 求逆序数 int count = 0; for (int i = 0; i &lt; 9; i++) &#123; if (num[i] == 0) &#123; continue; &#125; for (int j = i; j &lt; 9; j++) &#123; if (num[j] != 0 &amp;&amp; num[i] &gt; num[j]) &#123; count++; &#125; &#125; &#125; return count;&#125;bool hasSolution(vector&lt;int&gt; start, vector&lt;int&gt; end)&#123;// 判断逆序数奇偶性来决定是否有解 int inverStart, inverEnd; inverStart = getInversions(start); inverEnd = getInversions(end); return (inverStart % 2 == inverEnd % 2);&#125; 宽度优先搜索（又称广度优先搜索），即 BFS首先每一次的九宫格当做一个状态，即状态类： 12345678910111213141516class state&#123; public: vector&lt;int&gt; num; int nowId, parentId;// 自身 id 及父状态 id，用于输出路径 state(vector&lt;int&gt; num, int nowId, int parentId) &#123;// 构造函数 this-&gt;num = num; this-&gt;nowId = nowId; this-&gt;parentId = parentId; &#125; bool operator==(const state &amp;now) const &#123;// 重载 == 运算符判断两个状态是否相等 return isEqual(num, now.num); &#125;&#125;; 1234567891011bool isEqual(vector&lt;int&gt; start, vector&lt;int&gt; end)&#123; for (int i = 0; i &lt; 9; i++) &#123; if (start[i] != end[i]) &#123;// 只要有一个数字不同即不相等 return false; &#125; &#125; return true;&#125; 众所周知 BFS 算法需要借助一个队列实现： 123queue&lt;state&gt; open;vector&lt;state&gt; path;map&lt;vector&lt;int&gt;, bool&gt; close; open表即是状态队列，path表用于存储路径上的状态，close表用于判断一个状态是否被访问过。 BFS 算法函数： 12345678910111213141516171819202122232425262728293031323334353637383940414243int BFS(vector&lt;int&gt; start, vector&lt;int&gt; end)&#123; int id = 0, step = 0; vector&lt;int&gt; move = &#123;-1, -3, 1, 3&#125;;// 代表数字分别向左、上、右、下移动 open.push(state(start, id, id++)); while (!open.empty()) &#123;// 当 open 表非空时取队列头元素进行判断，并将生成的子状态加入队列尾部 state now = open.front(); open.pop(); path.push_back(now); close[now.num] = true;// 设置该状态已被访问 if (isEqual(now.num, end)) &#123; return path.size(); &#125; int zeroL = zeroLocation(now.num);// 找到数字 0 所在的的位置 int newLocation = 0; for (int i = 0; i &lt; 4; i++) &#123; newLocation = zeroL + move[i]; if (newLocation &gt; -1 &amp;&amp; newLocation &lt; 9 &amp;&amp; !(newLocation == 2 &amp;&amp; zeroL == 3) &amp;&amp; !(newLocation == 3 &amp;&amp; zeroL == 2) &amp;&amp; !(newLocation == 5 &amp;&amp; zeroL == 6) &amp;&amp; !(newLocation == 6 &amp;&amp; zeroL == 5)) &#123;// 判断数字移动后是否越界 swap(now.num[newLocation], now.num[zeroL]);// 对数字进行移动 state newState = state(now.num, id++, now.nowId); swap(now.num[newLocation], now.num[zeroL]); if (isEqual(newState.num, end)) &#123; path.push_back(newState); return path.size(); &#125; if (!close.count(newState.num)) &#123;// 若该状态不在 close 表中，即未被访问过 open.push(newState);// 新状态入队列 step++; &#125; &#125; &#125; &#125;&#125; 完整源代码详见 GitHub 启发式搜索启发式搜索 BFS 稍稍有些不同，主要在于启发式函数与启发式函数的选择。 启发式函数 f(x)=g(x)+h(x)其中 g(x) 表示目标状态到当前状态的代价，用当前状态节点的深度表示。 h(x) 表示当前状态到目标状态的估价，可以有很多选择，这里使用当前状态的位置与目标状态位置不同的数字个数表示。 这样每次就不必一次性扩展所有子节点，而是会尽量选择接近目标状态的节点去扩展。 12345678910111213141516int HX(vector&lt;int&gt; start, vector&lt;int&gt; end)&#123; int hX = 0; for (int i = 0; i &lt; 9; i++) &#123; if (start[i] != end[i]) &#123; hX++; &#125; &#125; return hX;&#125;int FX(state &amp;now)&#123; return now.hX + now.gX;&#125; 这次open表就无需使用队列来实现了 123vector&lt;state&gt; open;vector&lt;state&gt; path;map&lt;vector&lt;int&gt;, bool&gt; close; 每次只需要从open表中取出 f(x) 最小的状态节点进行子节点扩展即可。 启发式搜索主函数（大部分判断移动和扩展都与 BFS 算法相似） 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647int AStar(vector&lt;int&gt; start, vector&lt;int&gt; end)&#123; int id = 0; vector&lt;int&gt; move = &#123;-3, -1, 3, 1&#125;; open.push_back(state(start, HX(start, end), 0, HX(start, end), id, id++)); while (!open.empty()) &#123; auto min = min_element(open.begin(), open.end(), [](const state &amp;x, const state &amp;y)-&gt; bool &#123;// 寻找 open 表中 f(x) 最小的状态 return x.fX &lt; y.fX; &#125;); state now = *min; open.erase(min); path.push_back(now); close[now.num] = true; if (isEqual(now.num, end)) &#123; return now.gX; &#125; int zeroL = zeroLocation(now.num); int newLocation = 0; for (int i = 0; i &lt; 4; i++) &#123; newLocation = zeroL + move[i]; if (newLocation &gt; -1 &amp;&amp; newLocation &lt; 9 &amp;&amp; !(newLocation == 2 &amp;&amp; zeroL == 3) &amp;&amp; !(newLocation == 3 &amp;&amp; zeroL == 2) &amp;&amp; !(newLocation == 5 &amp;&amp; zeroL == 6) &amp;&amp; !(newLocation == 6 &amp;&amp; zeroL == 5)) &#123; swap(now.num[newLocation], now.num[zeroL]); state newState = state(now.num, 0, now.gX + 1, HX(now.num, end), id++, now.nowId); swap(now.num[newLocation], now.num[zeroL]); newState.fX = FX(newState); if (isEqual(newState.num, end)) &#123; path.push_back(newState); return newState.gX; &#125; if (!close.count(newState.num)) &#123; open.push_back(newState); &#125; &#125; &#125; &#125;&#125; 完整源代码]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>课程</tag>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Windows 下好用的软件]]></title>
+    <url>%2Farchives%2F7484639a.html</url>
+    <content type="text"><![CDATA[Windows 下一些好用的软件自用，备份 写作 Typora主题等 GitHub 支援 截图 PicPick Snipaste 文件 Listary Wox开源软件。GitHub 地址 看图 Honeyview 压缩 Bandizip 网速显示 TrafficMonitor开源软件。GitHub 地址 状态栏透明 TaskbarTool个人作品作者：浅陌兮。联系方式：&#x36;&#55;&#x35;&#57;&#x30;&#x33;&#x36;&#x33;&#x31;&#x40;&#113;&#113;&#x2e;&#x63;&#x6f;&#x6d;更新地址：百度云，密码：tpi2。 文件预览 QuickLook开源软件。GitHub 地址 应用卸载 Geek Uninstaller GIF 录制 ScreenToGif开源软件。GitHub 地址]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>备份</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Windows 下更改 Telegram Desktop 默认字体]]></title>
+    <url>%2Farchives%2Ffd45428c.html</url>
+    <content type="text"><![CDATA[备个份，方便以后好找。 感谢作者 ysc3839 github 链接地址 使用下载 TGFont.dll 并重命名为 winmm.dll，然后放在 Telegram 的文件夹里。 下载地址 配置初次运行时会创建 TGFont.json。 将中文字体更改为微软雅黑，我的配置如下： 1234567891011121314&#123; "fonts": &#123; "SimSun": &#123; "replace": "Microsoft YaHei UI", "#size": 0, "#width": 0, "#weight": 0, "#italic": false, "#underLine": false, "#strikeOut": false &#125; &#125;, "debug": false&#125;]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>Windows</tag>
+        <tag>备份</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[C++ 统计单词出现次数]]></title>
+    <url>%2Farchives%2F6dcb7056.html</url>
+    <content type="text"><![CDATA[前言咱们云计算课程的第一次实验：给定一英文文本文件 data.dat，编写 C 程序，读取文件中的内容，统计文件中出现次数最多的三个单词，并给出这三个单词的出现次数，同时输出程序运行的时间。（注： 这里不区分单词大小写，例如， he 与 He 当做是同一个单词计数） C 实在是不会用，直接用 C++ 好了……趴。 思路 思路其实并没有多复杂，第一反应就是用 map 了，用键值对存储单词及其对应的出现次数，然后按照键值对给 map 排序，最后输出出现次数排在前三位的单词及其次数。 由于 map 会区分单词大小写，即 HE，He，he，hE会被分开存储，于是就需要在输入单词之后将其都转化为小写，再存储进 map 里面。 实现包含的头文件123456789#include &lt;iostream&gt; //cout 输出流#include &lt;fstream&gt; //读取文件流 #include &lt;iomanip&gt; //控制输出格式#include &lt;map&gt; //存储单词#include &lt;vector&gt; //用于排序#include &lt;algorithm&gt; //sort 排序算法#include &lt;time.h&gt; //计算程序运行时间#include &lt;string&gt; //字符串操作#include &lt;cctype&gt; //过滤标点符号 map 的用法1234567891011map&lt;string, size_t&gt; wordCount; vector&lt;pair&lt;string, size_t&gt;&gt; wordVector; ifstream inFile; inFile.open("data.dat"); while (!inFile.eof()) &#123; inFile &gt;&gt; word; word = delePunct(word); word = toLower(word); wordCount[word]++; &#125; 这里使用map&lt;string, size_t&gt; wordCount;定义了一个名为wordCount的 map，其中第一个数据（关键字 key）为 string 类型，用于存储每一个单词，第二个数据（值 value ）为 size_t类型（C++ Primer 第五版 P375）。 注：在使用数组下标时，通常将其定义为 size_t类型，size_t是一种机器相关的无符号类型，它被设计得足够大 以便能够表示内存中任意对象的大小。（C++ Primer 第五版 P103） 接着通过while循环每次从inFile中输入一个单词，并将其去掉标点符号（delePunct()）和转换成小写（toLower()）之后，将其存入到map当中，并使其对应的值加 1 （若该单词不存在则会自动创建一个新的关键字）。 去掉标点符号123456789101112string delePunct(string word)&#123; string outword; for (int i = 0; i &lt; word.size(); i++) &#123; if (!ispunct(word[i])) &#123; outword = outword + word[i]; &#125; &#125; return outword;&#125; 将单词全部转换成小写12345678string toLower(string word)&#123; for (int i = 0; i &lt; word.size(); i++) &#123; word[i] = tolower(word[i]); &#125; return word;&#125; 使用 for 循环输出 map12345for (auto &amp;w : wordCount) &#123; cout &lt;&lt; left &lt;&lt; setw(20) &lt;&lt; w.first &lt;&lt; "\t" &lt;&lt; w.second &lt;&lt; ((w.second &gt; 1)? " times" : " time") &lt;&lt; endl; &#125; 将 map 按值排序并输出12345678910111213void sortByValue(map&lt;string, size_t&gt; &amp;wordMap, vector&lt;pair&lt;string, size_t&gt;&gt; &amp;wordVector)&#123; for (auto &amp;iter : wordMap) &#123; wordVector.push_back(make_pair(iter.first, iter.second)); &#125; sort(wordVector.begin(), wordVector.end(), compare); for (auto iter = wordVector.begin(); iter &lt; (wordVector.begin() + 3); iter++) &#123; cout &lt;&lt; left &lt;&lt; setw(20) &lt;&lt; iter-&gt;first &lt;&lt; "\t" &lt;&lt; iter-&gt;second &lt;&lt; ((iter-&gt;second &gt; 1) ? " times" : " time") &lt;&lt; endl; &#125;&#125; 值得注意的是，C++ 语言中的 map 默认按照 key 排序，并且也没有内建按值（value）排序的函数，所以我们需要将 map 中存储的 pair 对象存放在一个新建的 vector 中，然后再使用 vector 中的 sort 函数对其进行排序。vector 使用的 sort 函数中第三个参数 compare：1234bool compare(const pair&lt;string, size_t&gt; &amp;x, const pair&lt;string, size_t&gt; &amp;y)&#123; return x.second &gt; y.second;&#125; 完整源代码（并附有 Java 版本）]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>课程</tag>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo-next 基础配置]]></title>
+    <url>%2Farchives%2F31053b28.html</url>
+    <content type="text"><![CDATA[Hexo-next 主题的配置文件位于/themes/next/_config.yml，大部分情况下只需要修改这个文件即可。 修改网站图标12345favicon: small: /images/favicon-16x16-next.png medium: /images/favicon-32x32-next.png apple_touch_icon: /images/apple-touch-icon-next.png safari_pinned_tab: /images/logo.svg 将你想要更改的图标文件放在/source/目录（推荐）或者hexo-site/themes/next/source/images/目录替换同名文件即可。 增加（或删除）“标签”、“分类”等在网站所在文件夹执行 1hexo new page tags 即可添加标签页面（分类同理hexo new page categories） 对应 next 主题配置文件 123456789menu: home: / || home #about: /about/ || user tags: /tags/ || tags categories: /categories/ || th archives: /archives/ || archive #schedule: /schedule/ || calendar #sitemap: /sitemap.xml || sitemap #commonweal: /404/ || heartbeat 添加友链1234567# Blog rollslinks_icon: linklinks_title: Friendslinks_layout: block#links_layout: inlinelinks: 沚水的小窝: http://blog.zsakvo.cc/ 设置自己头像1avatar: /images/avatar.jpg 侧边栏增加自己社交账号1234567891011social: GitHub: https://github.com/zsgdyf || github #E-Mail: mailto:yourname@gmail.com || envelope #Google: https://plus.google.com/yourname || google Twitter: https://twitter.com/zsgdyf || twitter #FB Page: https://www.facebook.com/yourname || facebook #VK Group: https://vk.com/yourname || vk #StackOverflow: https://stackoverflow.com/yourname || stack-overflow #YouTube: https://youtube.com/yourname || youtube #Instagram: https://instagram.com/yourname || instagram #Skype: skype:yourname?call|chat || skype 文章字数统计安装字数统计插件 1npm i --save hexo-wordcount 然后打开主题配置 123456post_wordcount: item_text: true wordcount: true min2read: false totalcount: true separated_meta: true 打开 post.swig 文件，/themes/next/layout/_macro/post.swig 找到如下代码： 123&lt;span title=&quot;&#123;&#123; __(&apos;post.wordcount&apos;) &#125;&#125;&quot;&gt; &#123;&#123; wordcount(post.content) &#125;&#125;&lt;/span&gt; 修改为： 123&lt;span title=&quot;&#123;&#123; __(&apos;post.wordcount&apos;) &#125;&#125;&quot;&gt; &#123;&#123; wordcount(post.content) &#125;&#125; 字&lt;/span&gt; 同理修改阅读时长，修改为： 123&lt;span title=&quot;&#123;&#123; __(&apos;post.min2read&apos;) &#125;&#125;&quot;&gt; &#123;&#123; min2read(post.content) &#125;&#125; 分钟&lt;/span&gt; 修改字体大小找到 base.styl 文件，/themes/next/source/css/_variables/base.styl 找到如下代码 1234567891011121314151617// Font size$font-size-base = 16px$font-size-base = unit(hexo-config(&apos;font.global.size&apos;), px) if hexo-config(&apos;font.global.size&apos;) is a &apos;unit&apos;$font-size-small = $font-size-base - 2px$font-size-smaller = $font-size-base - 4px$font-size-large = $font-size-base + 2px$font-size-larger = $font-size-base + 4px// Headings font size$font-size-headings-step = 2px$font-size-headings-base = 25px$font-size-headings-base = unit(hexo-config(&apos;font.headings.size&apos;), px) if hexo-config(&apos;font.headings.size&apos;) is a &apos;unit&apos;$font-size-headings-small = $font-size-headings-base - $font-size-headings-step$font-size-headings-smaller = $font-size-headings-small - $font-size-headings-step$font-size-headings-large = $font-size-headings-base + $font-size-headings-step$font-size-headings-larger = $font-size-headings-large + $font-size-headings-step 修改其中的font-size-base即可。 增加站内搜索在网站所在文件夹执行 1npm install hexo-generator-search --save 添加搜索功能 接着修改主题配置文件为 12local_search: enable: true]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[心血来潮]]></title>
+    <url>%2Farchives%2F5be9a4c2.html</url>
+    <content type="text"><![CDATA[心血来潮想画一张表 虽然不知道具体想要表示什么……但总感觉应该就是这个样子的没错儿w 数据真的没有实际意义 数值都是咱瞎编的（逃~）]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HelloWorld]]></title>
+    <url>%2Farchives%2F77770c79.html</url>
+    <content type="text"><![CDATA[一切的开始 梦开始的地方 第一篇，还是老规矩，HelloWorld~]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+</search>

@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>前端常见知识点（三） - 随缘</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="zsgdyf,"> 
+    <meta name="description" content="年轻人的第一个小站,作用域前面讲到闭包的时候，我们说闭包是「是指有权访问另一个函数作用域中的变量的函数」，那么所谓的「作用域」又是什么呢？
+
+什么是作用域？先来看一个例子：
+123456var a = &#39;Hello!&#39;,"> 
+    <meta name="author" content="zsgdyf"> 
+    <link rel="alternative" href="atom.xml" title="随缘" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+</head>
+</html>
+<body class="loading">
+    <span id="config-title" style="display:none">随缘</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="https://zsgdyf.github.io"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">前端常见知识点（三）</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">前端常见知识点（三）</h1>
+        <div class="stuff">
+            <span>三月 07, 2019</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/前端/">前端</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/学习/">学习</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h1 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h1><p>前面讲到闭包的时候，我们说闭包是「是指有权访问另一个函数<strong>作用域</strong>中的变量的函数」，那么所谓的「作用域」又是什么呢？</p>
+<a id="more"></a>
+<h2 id="什么是作用域？"><a href="#什么是作用域？" class="headerlink" title="什么是作用域？"></a>什么是作用域？</h2><p>先来看一个例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'Hello!'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br><span class="line">greet() <span class="comment">// Hello!</span></span><br></pre></td></tr></table></figure>
+<p>在这段代码中，我们在<code>greet</code>函数外部定义了一个变量<code>a</code>，函数<code>greet</code>首先在自己的<strong>作用域</strong>中查找变量<code>a</code>，没有找到后再在外部的全局<strong>作用域</strong>中查找，找到之后将其打印输出。</p>
+<p>接下来是另外一个例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'Hello!'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> b = <span class="string">'world!'</span></span><br><span class="line">    <span class="built_in">console</span>.log(b)</span><br><span class="line">&#125;</span><br><span class="line">greet() <span class="comment">// world!</span></span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">// Hello!</span></span><br><span class="line"><span class="built_in">console</span>.log(b) <span class="comment">// ReferenceError: b is not defined</span></span><br></pre></td></tr></table></figure>
+<p>在这段代码中，我们在<code>greet</code>函数内部定义了一个变量<code>b</code>，调用<code>greet</code>函数能够正常将其打印输出，但是当我们在外部直接输出变量<code>b</code>的时候却报错了，也就是说，在全局<strong>作用域</strong>里，变量<code>b</code>是未定义的。</p>
+<p>于是我们知道，JavaScript 的<strong>作用域</strong>是通过<strong>函数</strong>来实现的，在函数<strong>内部</strong>定义的变量，在函数的<strong>外部</strong>是不可以访问的。</p>
+<p>在 ES6 的<code>let</code>、<code>const</code>关键字提出来之前，JavaScript 的作用域只有两种：「全局作用域」和「函数（局部）作用域」。<strong>JavaScript 是没有「块作用域」的。</strong></p>
+<h2 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h2><p>依旧是第一个例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'Hello!'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br><span class="line">greet() <span class="comment">// Hello!</span></span><br></pre></td></tr></table></figure>
+<p>我们查找变量<code>a</code>的过程是：首先在函数<code>greet</code>的作用域中查找，之后到函数的上一层（这里是全局）作用域中查找，这样<strong>逐步向外</strong>查找的过程形成一个链条，就称作「作用域链」。</p>
+<p>下面来看一个例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'window'</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outter</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="string">'outter'</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">inner</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> a = <span class="string">'inner'</span></span><br><span class="line">        <span class="built_in">console</span>.log(a)</span><br><span class="line">    &#125;</span><br><span class="line">    inner() <span class="comment">// inner</span></span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br><span class="line">outter() <span class="comment">// outter</span></span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">// window</span></span><br></pre></td></tr></table></figure>
+<p>如果把<code>inner</code>函数中的<code>a</code>的定义注释掉，那么<code>ineer()</code>的输出就是<code>outter</code>；如果再把<code>outter</code>函数中的<code>a</code>定义注释掉，那么三个输出就全都是<code>window</code>；这里的作用域链就是<code>inner</code>-&gt;<code>outter</code>-&gt;<code>window</code>（全局）。</p>
+<h2 id="延长作用域链"><a href="#延长作用域链" class="headerlink" title="延长作用域链"></a>延长作用域链</h2><p>尽管在 JavaScript 中，作用域只有全局和局部（函数）两种，但是作用域链可能会在某些情况下得到加长。</p>
+<blockquote>
+<ol>
+<li><code>try-catch</code>语句的<code>catch</code>块；</li>
+<li><code>with</code>语句。</li>
+</ol>
+</blockquote>
+<p>在「红宝书」中有一个 <code>with</code>语句的例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">buildUrl</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> qs = <span class="string">"?debyg=true"</span></span><br><span class="line">    <span class="keyword">with</span> (location) &#123;</span><br><span class="line">        <span class="keyword">var</span> url = href + qs</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> url</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(buildUrl())</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，<code>with</code>语句接受到的是<code>location</code>对象，因此其变量对象中就包含了<code>location</code>对象的所有属性和方法，而这个变量对象被临时添加到了作用域链的前端，作用域链就变成了：<code>location</code>对象-&gt;<code>buildUrl</code>的变量对象-&gt;<code>windows</code>全局对象，于是当在<code>with</code>语句中引用变量<code>href</code>时，实际引用的就是<code>location.href</code>。</p>
+<p>至于<code>try-catch</code>语句：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    doSomething()</span><br><span class="line">&#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">    handleError(error)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对于<code>catch</code>语句来说，会创建一个包含着被抛出的错误对象的声明的新的变量对象，并将其置于作用域链的头部，当<code>catch</code>语句块的代码执行完，会移除该变量对象，销毁作用域。</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
+                    
+                        <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci='6343f9028efd0476e771'
+        data-cs='d06ca503cc9e12a08d5323e3ead1f57b6512cff3'
+        data-r='zsgdyf.github.io'
+        data-o='zsgdyf'
+        data-a='zsgdyf'
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#作用域"><span class="toc-number">1.</span> <span class="toc-text">作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是作用域？"><span class="toc-number">1.1.</span> <span class="toc-text">什么是作用域？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#作用域链"><span class="toc-number">1.2.</span> <span class="toc-text">作用域链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#延长作用域链"><span class="toc-number">1.3.</span> <span class="toc-text">延长作用域链</span></a></li></ol></li></ol>
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-126218656-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+</html>
