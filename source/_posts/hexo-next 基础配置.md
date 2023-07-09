@@ -16,7 +16,7 @@ Hexo-next 主题的配置文件位于`/themes/next/_config.yml`，
 
 # 修改网站图标
 
-```
+```yaml
 favicon:
   small: /images/favicon-16x16-next.png
   medium: /images/favicon-32x32-next.png
@@ -39,7 +39,7 @@ hexo new page tags
 
 对应 next 主题配置文件
 
-```
+```yaml
 menu:
   home: / || home
   #about: /about/ || user
@@ -53,7 +53,7 @@ menu:
 
 # 添加友链
 
-```
+```yaml
 # Blog rolls
 links_icon: link
 links_title: Friends
@@ -65,13 +65,13 @@ links:
 
 # 设置自己头像
 
-```
+```yaml
   avatar: /images/avatar.jpg
 ```
 
 # 侧边栏增加自己社交账号
 
-```
+```yaml
 social:
   GitHub: https://github.com/zsgdyf || github
   #E-Mail: mailto:yourname@gmail.com || envelope
@@ -95,7 +95,7 @@ social:
 
 然后打开主题配置
 
-```
+```yaml
  post_wordcount:
   item_text: true
   wordcount: true
@@ -108,7 +108,7 @@ social:
 
 找到如下代码：
 
-```
+```html
 <span title="{{ __('post.wordcount') }}">
     {{ wordcount(post.content) }}
 </span>
@@ -116,7 +116,7 @@ social:
 
 修改为：
 
-```
+```html
 <span title="{{ __('post.wordcount') }}">
     {{ wordcount(post.content) }} 字
 </span>
@@ -124,7 +124,7 @@ social:
 
 同理修改阅读时长，修改为：
 
-```
+```html
 <span title="{{ __('post.min2read') }}">
     {{ min2read(post.content) }} 分钟
 </span>
@@ -136,7 +136,7 @@ social:
 
 找到如下代码
 
-```
+```styl
 // Font size
 $font-size-base           = 16px
 $font-size-base           = unit(hexo-config('font.global.size'), px) if hexo-config('font.global.size') is a 'unit'
@@ -170,7 +170,7 @@ npm install hexo-generator-search --save
 
 接着修改主题配置文件为
 
-```
+```yaml
 local_search:
   enable: true
 ```
