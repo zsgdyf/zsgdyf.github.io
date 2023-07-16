@@ -70,19 +70,28 @@
 <li>其中 <code>&quot;baseinfoSet_TELECOMACCOUNT&quot;:&quot;telecomadmin&quot;</code> 是超级管理员账户，<code>&quot;baseinfoSet_TELECOMPASSWORD&quot;</code> 后面的字符串是超级管理员密码。</li>
 <li>超级管理员密码是 <code>ASCII</code> 格式，对照 <code>ASCII</code> 码表解出原始字符串后，拼在 <code>telecomadmin</code> 后即得到超级管理员密码。</li>
 </ol>
-<p>使用超级管理员登陆后，记住光猫的逻辑ID，后面换光猫的时候会用到。</p>
+<p>使用超级管理员登陆后，记住光猫的逻辑ID，后面换光猫的时候会用到（如下图）。<br><img src="/images/lightModem/逻辑ID.png" alt="逻辑ID" title="逻辑ID"></p>
+<h1 id="更换光猫"><a href="#更换光猫" class="headerlink" title="更换光猫"></a>更换光猫</h1><ol>
+<li>更换光猫的时，先将新光猫恢复出厂设置，然后插上电源和光纤。</li>
+<li>进入 <a href="http://192.168.1.1:8080" target="_blank" rel="noopener">http://192.168.1.1:8080</a> ，点击设备注册。<br><img src="/images/lightModem/设备注册.png" alt="设备注册" title="设备注册"></li>
+<li>输入从老光猫上看到的逻辑ID，等待业务下发后，设备注册成功，这一步如果不成功的话，可以打 10000 人工客服咨询。</li>
+</ol>
 <h1 id="TEWA-1000E"><a href="#TEWA-1000E" class="headerlink" title="TEWA-1000E"></a>TEWA-1000E</h1><p>TEWA-1000E 是一款 10GEPON 猫，有三个千兆口。</p>
 <ol>
 <li>将 U 盘插上光猫，在 <a href="http://192.168.1.1" target="_blank" rel="noopener">http://192.168.1.1</a> 能看到 U 盘挂载上。</li>
 <li>进入 <a href="http://192.168.1.1:8080" target="_blank" rel="noopener">http://192.168.1.1:8080</a> 后台管理地址，使用光猫后面贴的账号密码登录。</li>
 <li>进入设备管理页面，右键查看源代码，搜索 set3_sessionKey 字符串，会看到 set3_sessionKey_XXX。</li>
 <li>进入 <a href="http://192.168.1.1:8080/usbbackup.cmd?action=backupeble&amp;set3_sessionKey=set3_sessionKey_XXX" target="_blank" rel="noopener">http://192.168.1.1:8080/usbbackup.cmd?action=backupeble&amp;set3_sessionKey=set3_sessionKey_XXX</a>。</li>
-<li>在这个页面按 F12 打开控制台，输入以下代码执行：</li>
-</ol>
+<li><p>在这个页面按 F12 打开控制台，输入以下代码执行：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">usbsubarea = &#123;</span><br><span class="line">   selectedIndex: <span class="number">0</span>,</span><br><span class="line">   value: <span class="string">"never_mind..."</span>,</span><br><span class="line">   options:[</span><br><span class="line">     &#123;<span class="attr">value</span>: <span class="string">"usb1_1"</span>&#125;</span><br><span class="line">   ]</span><br><span class="line"> &#125;;</span><br><span class="line"> btnApply();</span><br></pre></td></tr></table></figure>
-<ol>
-<li>此时 U 盘中会多一个文件夹，里面有一个 cfg 后缀的文件。</li>
+</li>
+<li><p>此时 U 盘中会多一个文件夹，里面有一个 cfg 后缀的文件。</p>
+</li>
 <li>在电脑上使用<a href="https://github.com/jonirrings/xor" target="_blank" rel="noopener">解密工具</a>解密，得到一个 xml 文件。文件中搜索 COM_TeleComAccount 即得到超级密码。</li>
+</ol>
+<h1 id="光猫改桥接模式"><a href="#光猫改桥接模式" class="headerlink" title="光猫改桥接模式"></a>光猫改桥接模式</h1><ol>
+<li>进入 <a href="http://192.168.1.1:8080" target="_blank" rel="noopener">http://192.168.1.1:8080</a> 后台管理页面，找到网络设置</li>
+<li>如下图更改对应设置即可，LAN 口绑定 4 个都勾选上<br><img src="/images/lightModem/桥接.png" alt="桥接" title="桥接"></li>
 </ol>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
@@ -119,7 +128,7 @@
     </div>
     
         <div class='side'>
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#烽火HG2201T"><span class="toc-number">1.</span> <span class="toc-text">烽火HG2201T</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#TEWA-1000E"><span class="toc-number">2.</span> <span class="toc-text">TEWA-1000E</span></a></li></ol>	
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#烽火HG2201T"><span class="toc-number">1.</span> <span class="toc-text">烽火HG2201T</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#更换光猫"><span class="toc-number">2.</span> <span class="toc-text">更换光猫</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#TEWA-1000E"><span class="toc-number">3.</span> <span class="toc-text">TEWA-1000E</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#光猫改桥接模式"><span class="toc-number">4.</span> <span class="toc-text">光猫改桥接模式</span></a></li></ol>	
         </div>
     
 </div>

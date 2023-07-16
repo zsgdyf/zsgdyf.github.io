@@ -16,52 +16,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Windows 下好用的软件</title>
-    <url>/archives/7484639a.html</url>
-    <content><![CDATA[<p>Windows 下一些好用的软件<br>自用，备份</p>
-<a id="more"></a>
-<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><ul>
-<li><a href="https://typora.io/" target="_blank" rel="noopener">Typora</a><br>主题等 <a href="https://github.com/typora" target="_blank" rel="noopener">GitHub 支援</a></li>
-</ul>
-<h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><ul>
-<li><a href="https://picpick.app/zh/" target="_blank" rel="noopener">PicPick</a></li>
-<li><a href="https://zh.snipaste.com/" target="_blank" rel="noopener">Snipaste</a></li>
-</ul>
-<h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><ul>
-<li><a href="https://www.listary.com/" target="_blank" rel="noopener">Listary</a></li>
-<li><a href="http://www.wox.one/" target="_blank" rel="noopener">Wox</a><br>开源软件。<a href="https://github.com/Wox-launcher/Wox" target="_blank" rel="noopener">GitHub 地址</a></li>
-</ul>
-<h2 id="看图"><a href="#看图" class="headerlink" title="看图"></a>看图</h2><ul>
-<li><a href="https://cn.bandisoft.com/honeyview/" target="_blank" rel="noopener">Honeyview</a></li>
-</ul>
-<h2 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h2><ul>
-<li><a href="http://cn.bandisoft.com/" target="_blank" rel="noopener">Bandizip</a></li>
-</ul>
-<h2 id="网速显示"><a href="#网速显示" class="headerlink" title="网速显示"></a>网速显示</h2><ul>
-<li>TrafficMonitor<br>开源软件。<a href="https://github.com/zhongyang219/TrafficMonitor" target="_blank" rel="noopener">GitHub 地址</a></li>
-</ul>
-<h2 id="状态栏透明"><a href="#状态栏透明" class="headerlink" title="状态栏透明"></a>状态栏透明</h2><ul>
-<li>TaskbarTool<br>个人作品<br>作者：浅陌兮。<br>联系方式：<a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#54;&#55;&#53;&#x39;&#48;&#x33;&#x36;&#51;&#x31;&#x40;&#x71;&#113;&#46;&#99;&#x6f;&#x6d;">&#54;&#55;&#53;&#x39;&#48;&#x33;&#x36;&#51;&#x31;&#x40;&#x71;&#113;&#46;&#99;&#x6f;&#x6d;</a><br>更新地址：<a href="https://yun.baidu.com/s/1dFNAfpZ" target="_blank" rel="noopener">百度云</a>，密码：tpi2。</li>
-</ul>
-<h2 id="文件预览"><a href="#文件预览" class="headerlink" title="文件预览"></a>文件预览</h2><ul>
-<li><a href="https://pooi.moe/QuickLook/" target="_blank" rel="noopener">QuickLook</a><br>开源软件。<a href="https://github.com/QL-Win/QuickLook" target="_blank" rel="noopener">GitHub 地址</a></li>
-</ul>
-<h2 id="应用卸载"><a href="#应用卸载" class="headerlink" title="应用卸载"></a>应用卸载</h2><ul>
-<li><a href="https://geekuninstaller.com" target="_blank" rel="noopener">Geek Uninstaller</a></li>
-</ul>
-<h2 id="GIF-录制"><a href="#GIF-录制" class="headerlink" title="GIF 录制"></a>GIF 录制</h2><ul>
-<li><a href="https://www.screentogif.com/" target="_blank" rel="noopener">ScreenToGif</a><br>开源软件。<a href="https://github.com/NickeManarin/ScreenToGif" target="_blank" rel="noopener">GitHub 地址</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>备份</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Windows 下更改 Telegram Desktop 默认字体</title>
     <url>/archives/fd45428c.html</url>
     <content><![CDATA[<p>备个份，方便以后好找。</p>
@@ -79,8 +33,29 @@
       </categories>
       <tags>
         <tag>随笔</tag>
-        <tag>Windows</tag>
         <tag>备份</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端常见知识点（一）</title>
+    <url>/archives/80fa8210.html</url>
+    <content><![CDATA[<h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><h2 id="什么是闭包？"><a href="#什么是闭包？" class="headerlink" title="什么是闭包？"></a>什么是闭包？</h2><p>常见的理解，用「红宝书」中的话说就是：<strong>闭包</strong>是指有权访问<strong>另一个函数作用域</strong>中的变量的<strong>函数</strong>。创建闭包的常见方式就是在一个函数内部创建另一个函数。</p>
+<a id="more"></a>
+<p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greetFunc</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> greet = <span class="string">'Hello!'</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">foo</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(greet)</span><br><span class="line">    &#125;</span><br><span class="line">    foo()</span><br><span class="line">&#125;</span><br><span class="line">greetFunc() <span class="comment">// greet</span></span><br></pre></td></tr></table></figure>
+<p>在这段代码中，函数<code>foo()</code>成功打印出了在其父函数中定义的<code>greet</code>变量的值，这就形成了一个闭包。</p>
+<h2 id="闭包有什么用？"><a href="#闭包有什么用？" class="headerlink" title="闭包有什么用？"></a>闭包有什么用？</h2><p>常见的理解，闭包一般用来「间接」访问一个变量，或者说，「隐藏」一个变量。</p>
+<p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greetFunc</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> greet = <span class="string">'Hello!'</span></span><br><span class="line">    <span class="keyword">this</span>.getGreet = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> greet;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.setGreet = <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">        greet = value</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> foo = <span class="keyword">new</span> greetFunc()</span><br><span class="line"><span class="built_in">console</span>.log(foo.getGreet()) <span class="comment">// Hello!</span></span><br><span class="line">foo.setGreet(<span class="string">'Bonjour!'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(foo.getGreet()) <span class="comment">// Bonjour!</span></span><br></pre></td></tr></table></figure>
+<p>这样，在<code>greetFunc()</code>函数外部，我们就可以通过<code>get</code>和<code>set</code>方法来访问函数内部的变量<code>greet</code>了。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -123,8 +98,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>学习</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -158,6 +133,70 @@
         <tag>学习</tag>
         <tag>课程</tag>
         <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端常见知识点（三）</title>
+    <url>/archives/fdf2cd9a.html</url>
+    <content><![CDATA[<h1 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h1><p>前面讲到闭包的时候，我们说闭包是「是指有权访问另一个函数<strong>作用域</strong>中的变量的函数」，那么所谓的「作用域」又是什么呢？</p>
+<a id="more"></a>
+<h2 id="什么是作用域？"><a href="#什么是作用域？" class="headerlink" title="什么是作用域？"></a>什么是作用域？</h2><p>先来看一个例子：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'Hello!'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br><span class="line">greet() <span class="comment">// Hello!</span></span><br></pre></td></tr></table></figure>
+<p>在这段代码中，我们在<code>greet</code>函数外部定义了一个变量<code>a</code>，函数<code>greet</code>首先在自己的<strong>作用域</strong>中查找变量<code>a</code>，没有找到后再在外部的全局<strong>作用域</strong>中查找，找到之后将其打印输出。</p>
+<p>接下来是另外一个例子：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'Hello!'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> b = <span class="string">'world!'</span></span><br><span class="line">    <span class="built_in">console</span>.log(b)</span><br><span class="line">&#125;</span><br><span class="line">greet() <span class="comment">// world!</span></span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">// Hello!</span></span><br><span class="line"><span class="built_in">console</span>.log(b) <span class="comment">// ReferenceError: b is not defined</span></span><br></pre></td></tr></table></figure>
+<p>在这段代码中，我们在<code>greet</code>函数内部定义了一个变量<code>b</code>，调用<code>greet</code>函数能够正常将其打印输出，但是当我们在外部直接输出变量<code>b</code>的时候却报错了，也就是说，在全局<strong>作用域</strong>里，变量<code>b</code>是未定义的。</p>
+<p>于是我们知道，JavaScript 的<strong>作用域</strong>是通过<strong>函数</strong>来实现的，在函数<strong>内部</strong>定义的变量，在函数的<strong>外部</strong>是不可以访问的。</p>
+<p>在 ES6 的<code>let</code>、<code>const</code>关键字提出来之前，JavaScript 的作用域只有两种：「全局作用域」和「函数（局部）作用域」。<strong>JavaScript 是没有「块作用域」的。</strong></p>
+<h2 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h2><p>依旧是第一个例子：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'Hello!'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br><span class="line">greet() <span class="comment">// Hello!</span></span><br></pre></td></tr></table></figure>
+<p>我们查找变量<code>a</code>的过程是：首先在函数<code>greet</code>的作用域中查找，之后到函数的上一层（这里是全局）作用域中查找，这样<strong>逐步向外</strong>查找的过程形成一个链条，就称作「作用域链」。</p>
+<p>下面来看一个例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'window'</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outter</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="string">'outter'</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">inner</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> a = <span class="string">'inner'</span></span><br><span class="line">        <span class="built_in">console</span>.log(a)</span><br><span class="line">    &#125;</span><br><span class="line">    inner() <span class="comment">// inner</span></span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br><span class="line">outter() <span class="comment">// outter</span></span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">// window</span></span><br></pre></td></tr></table></figure>
+<p>如果把<code>inner</code>函数中的<code>a</code>的定义注释掉，那么<code>ineer()</code>的输出就是<code>outter</code>；如果再把<code>outter</code>函数中的<code>a</code>定义注释掉，那么三个输出就全都是<code>window</code>；这里的作用域链就是<code>inner</code>-&gt;<code>outter</code>-&gt;<code>window</code>（全局）。</p>
+<h2 id="延长作用域链"><a href="#延长作用域链" class="headerlink" title="延长作用域链"></a>延长作用域链</h2><p>尽管在 JavaScript 中，作用域只有全局和局部（函数）两种，但是作用域链可能会在某些情况下得到加长。</p>
+<blockquote>
+<ol>
+<li><code>try-catch</code>语句的<code>catch</code>块；</li>
+<li><code>with</code>语句。</li>
+</ol>
+</blockquote>
+<p>在「红宝书」中有一个 <code>with</code>语句的例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">buildUrl</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> qs = <span class="string">"?debyg=true"</span></span><br><span class="line">    <span class="keyword">with</span> (location) &#123;</span><br><span class="line">        <span class="keyword">var</span> url = href + qs</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> url</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(buildUrl())</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，<code>with</code>语句接受到的是<code>location</code>对象，因此其变量对象中就包含了<code>location</code>对象的所有属性和方法，而这个变量对象被临时添加到了作用域链的前端，作用域链就变成了：<code>location</code>对象-&gt;<code>buildUrl</code>的变量对象-&gt;<code>windows</code>全局对象，于是当在<code>with</code>语句中引用变量<code>href</code>时，实际引用的就是<code>location.href</code>。</p>
+<p>至于<code>try-catch</code>语句：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    doSomething()</span><br><span class="line">&#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">    handleError(error)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对于<code>catch</code>语句来说，会创建一个包含着被抛出的错误对象的声明的新的变量对象，并将其置于作用域链的头部，当<code>catch</code>语句块的代码执行完，会移除该变量对象，销毁作用域。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端常见知识点（四）</title>
+    <url>/archives/4adfd4ff.html</url>
+    <content><![CDATA[<h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><p>IE 的事件流叫做「事件冒泡」，是指事件开始的时候是由最具体的元素（文档中嵌套层次最深的那个节点），或者说，是距离事件发生的最近的节点接受，然后<strong>逐级向上</strong>传播到较为不具体的节点（<code>document</code>）。</p>
+<p>而 Netscape （网景）团队提出的另外一种事件流叫做「事件捕获」，与事件冒泡刚好相反，事件捕获的思想是不太具体的节点应该更先接收到事件，最具体的节点最后接收到事件。</p>
+<a id="more"></a>
+<h2 id="DOM-事件流"><a href="#DOM-事件流" class="headerlink" title="DOM 事件流"></a>DOM 事件流</h2><p>「DOM 2 级事件」规定，事件流包括三个阶段：<strong>事件捕获</strong>、<strong>事件处理</strong>和<strong>事件冒泡</strong>阶段，并且在事件捕获的阶段，实际发生事件的节点不会接收到事件，事件从<code>document</code>到<code>&lt;html&gt;</code>再到<code>&lt;body&gt;</code>后就停止了，之后在目标节点上发生，并在事件处理中被看成是冒泡阶段的一部分，之后在冒泡阶段中，事件又传播回<code>document</code>。</p>
+<h2 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h2><p>事件对象<code>event</code>是一个 在触发 DOM 上的某个事件时产生的，包含所有与该事件有关的信息的 对象。例如：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span>BUTTON<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>)</span></span><br><span class="line"><span class="javascript">            btn.onclick = <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(event)</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>点击按钮，然后在 Chrome 浏览器的控制台里我们就可以看到<code>event</code>对象的所有信息了。比如事件的类型<code>event.type</code>（<code>click</code>），事件的目标（即导致事件产生的元素）<code>event.target</code>（<code>button#btn</code>）等。合理利用事件对象的这些属性帮助我们提升不少工作效率，例如使用<code>target</code>属性完成事件委托。</p>
+<h2 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h2><p>在「红宝书」中有这么一个例子：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"links"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"goSomewhere"</span>&gt;</span>Go Somewhere<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"doSomething"</span>&gt;</span>Do doSomething<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"greet"</span>&gt;</span>Greet<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> links = <span class="built_in">document</span>.getElementById(<span class="string">'links'</span>)</span></span><br><span class="line"><span class="javascript">            links.addEventListener(<span class="string">'click'</span>, (event) =&gt; &#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> target = event.target</span></span><br><span class="line"><span class="javascript">                <span class="keyword">switch</span> (target.id) &#123;</span></span><br><span class="line"><span class="javascript">                    <span class="keyword">case</span> <span class="string">'goSomewhere'</span>:</span></span><br><span class="line"><span class="javascript">                        location.href = <span class="string">'anotherPage.html'</span></span></span><br><span class="line"><span class="javascript">                        <span class="keyword">break</span></span></span><br><span class="line"><span class="javascript">                    <span class="keyword">case</span> <span class="string">'doSomething'</span>:</span></span><br><span class="line"><span class="javascript">                        <span class="built_in">document</span>.title = <span class="string">'The Title Changed'</span></span></span><br><span class="line"><span class="javascript">                        <span class="keyword">break</span></span></span><br><span class="line"><span class="javascript">                    <span class="keyword">case</span> <span class="string">'greet'</span>:</span></span><br><span class="line"><span class="javascript">                        alert(<span class="string">'Hello!'</span>)</span></span><br><span class="line"><span class="javascript">                        <span class="keyword">break</span></span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="undefined">            &#125;)</span></span><br><span class="line"><span class="undefined">        </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在这个例子里，我们使用事件委托只为<code>&lt;ul&gt;</code>元素添加了一个<code>onclick</code>事件处理程序，由于事件冒泡的特点，<code>&lt;ul&gt;</code>就可以处理它的所有子节点<code>&lt;li&gt;</code>的事件，这样子，比取得每一个<code>&lt;li&gt;</code>元素并分别对齐添加事件要方便的多。</p>
+<p>并且这种方式因为只取得了一个 DOM 元素，只添加了一个事件处理程序，所以占用的内存更少，所花的时间也更少。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -251,125 +290,6 @@ f(x)=g(x)+h(x)</script><p>其中 <script type="math/tex">g(x)</script> 表示目
       </tags>
   </entry>
   <entry>
-    <title>前端常见知识点（一）</title>
-    <url>/archives/80fa8210.html</url>
-    <content><![CDATA[<h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><h2 id="什么是闭包？"><a href="#什么是闭包？" class="headerlink" title="什么是闭包？"></a>什么是闭包？</h2><p>常见的理解，用「红宝书」中的话说就是：<strong>闭包</strong>是指有权访问<strong>另一个函数作用域</strong>中的变量的<strong>函数</strong>。创建闭包的常见方式就是在一个函数内部创建另一个函数。</p>
-<a id="more"></a>
-<p>例如：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greetFunc</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> greet = <span class="string">'Hello!'</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">foo</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(greet)</span><br><span class="line">    &#125;</span><br><span class="line">    foo()</span><br><span class="line">&#125;</span><br><span class="line">greetFunc() <span class="comment">// greet</span></span><br></pre></td></tr></table></figure>
-<p>在这段代码中，函数<code>foo()</code>成功打印出了在其父函数中定义的<code>greet</code>变量的值，这就形成了一个闭包。</p>
-<h2 id="闭包有什么用？"><a href="#闭包有什么用？" class="headerlink" title="闭包有什么用？"></a>闭包有什么用？</h2><p>常见的理解，闭包一般用来「间接」访问一个变量，或者说，「隐藏」一个变量。</p>
-<p>例如：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greetFunc</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> greet = <span class="string">'Hello!'</span></span><br><span class="line">    <span class="keyword">this</span>.getGreet = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> greet;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.setGreet = <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">        greet = value</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> foo = <span class="keyword">new</span> greetFunc()</span><br><span class="line"><span class="built_in">console</span>.log(foo.getGreet()) <span class="comment">// Hello!</span></span><br><span class="line">foo.setGreet(<span class="string">'Bonjour!'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(foo.getGreet()) <span class="comment">// Bonjour!</span></span><br></pre></td></tr></table></figure>
-<p>这样，在<code>greetFunc()</code>函数外部，我们就可以通过<code>get</code>和<code>set</code>方法来访问函数内部的变量<code>greet</code>了。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端常见知识点（三）</title>
-    <url>/archives/fdf2cd9a.html</url>
-    <content><![CDATA[<h1 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h1><p>前面讲到闭包的时候，我们说闭包是「是指有权访问另一个函数<strong>作用域</strong>中的变量的函数」，那么所谓的「作用域」又是什么呢？</p>
-<a id="more"></a>
-<h2 id="什么是作用域？"><a href="#什么是作用域？" class="headerlink" title="什么是作用域？"></a>什么是作用域？</h2><p>先来看一个例子：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'Hello!'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br><span class="line">greet() <span class="comment">// Hello!</span></span><br></pre></td></tr></table></figure>
-<p>在这段代码中，我们在<code>greet</code>函数外部定义了一个变量<code>a</code>，函数<code>greet</code>首先在自己的<strong>作用域</strong>中查找变量<code>a</code>，没有找到后再在外部的全局<strong>作用域</strong>中查找，找到之后将其打印输出。</p>
-<p>接下来是另外一个例子：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'Hello!'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> b = <span class="string">'world!'</span></span><br><span class="line">    <span class="built_in">console</span>.log(b)</span><br><span class="line">&#125;</span><br><span class="line">greet() <span class="comment">// world!</span></span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">// Hello!</span></span><br><span class="line"><span class="built_in">console</span>.log(b) <span class="comment">// ReferenceError: b is not defined</span></span><br></pre></td></tr></table></figure>
-<p>在这段代码中，我们在<code>greet</code>函数内部定义了一个变量<code>b</code>，调用<code>greet</code>函数能够正常将其打印输出，但是当我们在外部直接输出变量<code>b</code>的时候却报错了，也就是说，在全局<strong>作用域</strong>里，变量<code>b</code>是未定义的。</p>
-<p>于是我们知道，JavaScript 的<strong>作用域</strong>是通过<strong>函数</strong>来实现的，在函数<strong>内部</strong>定义的变量，在函数的<strong>外部</strong>是不可以访问的。</p>
-<p>在 ES6 的<code>let</code>、<code>const</code>关键字提出来之前，JavaScript 的作用域只有两种：「全局作用域」和「函数（局部）作用域」。<strong>JavaScript 是没有「块作用域」的。</strong></p>
-<h2 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h2><p>依旧是第一个例子：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'Hello!'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br><span class="line">greet() <span class="comment">// Hello!</span></span><br></pre></td></tr></table></figure>
-<p>我们查找变量<code>a</code>的过程是：首先在函数<code>greet</code>的作用域中查找，之后到函数的上一层（这里是全局）作用域中查找，这样<strong>逐步向外</strong>查找的过程形成一个链条，就称作「作用域链」。</p>
-<p>下面来看一个例子：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'window'</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outter</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="string">'outter'</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">inner</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> a = <span class="string">'inner'</span></span><br><span class="line">        <span class="built_in">console</span>.log(a)</span><br><span class="line">    &#125;</span><br><span class="line">    inner() <span class="comment">// inner</span></span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br><span class="line">outter() <span class="comment">// outter</span></span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">// window</span></span><br></pre></td></tr></table></figure>
-<p>如果把<code>inner</code>函数中的<code>a</code>的定义注释掉，那么<code>ineer()</code>的输出就是<code>outter</code>；如果再把<code>outter</code>函数中的<code>a</code>定义注释掉，那么三个输出就全都是<code>window</code>；这里的作用域链就是<code>inner</code>-&gt;<code>outter</code>-&gt;<code>window</code>（全局）。</p>
-<h2 id="延长作用域链"><a href="#延长作用域链" class="headerlink" title="延长作用域链"></a>延长作用域链</h2><p>尽管在 JavaScript 中，作用域只有全局和局部（函数）两种，但是作用域链可能会在某些情况下得到加长。</p>
-<blockquote>
-<ol>
-<li><code>try-catch</code>语句的<code>catch</code>块；</li>
-<li><code>with</code>语句。</li>
-</ol>
-</blockquote>
-<p>在「红宝书」中有一个 <code>with</code>语句的例子：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">buildUrl</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> qs = <span class="string">"?debyg=true"</span></span><br><span class="line">    <span class="keyword">with</span> (location) &#123;</span><br><span class="line">        <span class="keyword">var</span> url = href + qs</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> url</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(buildUrl())</span><br></pre></td></tr></table></figure>
-<p>在这个例子中，<code>with</code>语句接受到的是<code>location</code>对象，因此其变量对象中就包含了<code>location</code>对象的所有属性和方法，而这个变量对象被临时添加到了作用域链的前端，作用域链就变成了：<code>location</code>对象-&gt;<code>buildUrl</code>的变量对象-&gt;<code>windows</code>全局对象，于是当在<code>with</code>语句中引用变量<code>href</code>时，实际引用的就是<code>location.href</code>。</p>
-<p>至于<code>try-catch</code>语句：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    doSomething()</span><br><span class="line">&#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">    handleError(error)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>对于<code>catch</code>语句来说，会创建一个包含着被抛出的错误对象的声明的新的变量对象，并将其置于作用域链的头部，当<code>catch</code>语句块的代码执行完，会移除该变量对象，销毁作用域。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端常见知识点（二）</title>
-    <url>/archives/b0ec6ec8.html</url>
-    <content><![CDATA[<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p>根据「红宝书」中的描述，<strong>原型链</strong>是实现继承的主要方法。其原理是利用<strong>原型</strong>让一个引用类型继承另一个引用类型的属性和方法。</p>
-<a id="more"></a>
-<p>例如：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">'F'</span></span><br><span class="line">&#125;</span><br><span class="line">Father.prototype.getFatherName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Son</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.sonname = <span class="string">"S"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 创建 Father 实例，并将其赋给 Son.prototype</span></span><br><span class="line">Son.prototype = <span class="keyword">new</span> Father()</span><br><span class="line">Son.prototype.getSonName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.sonname</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> son1 = <span class="keyword">new</span> Son()</span><br><span class="line"><span class="built_in">console</span>.log(son1.getFatherName()) <span class="comment">// F</span></span><br></pre></td></tr></table></figure>
-<p>上述代码实现了<code>Son</code>继承<code>Father</code>，其本质是重写<code>Son</code>的原型对象，并以<code>Father</code>的实例代之，这样，原本存在于<code>Father</code>实例中的属性和方法，现在也存在于<code>Son.prototype</code>中了。</p>
-<p>同时的，<strong>所有函数的默认原型都是<code>Object</code>的实例</strong>，即可以看做是</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Father.prototype = <span class="keyword">new</span> <span class="built_in">Object</span>()</span><br></pre></td></tr></table></figure>
-<p>这样我们就有了「<code>Son</code>的原型对象中包含着指向<code>Father</code>原型的指针，<code>Father</code>的原型对象中又包含着指向<code>Object</code>原型的指针」，如此递进，形成了实例与原型的链，这就是原型链的基本概念。</p>
-<p>但是所谓的「原型对象」又是什么呢？</p>
-<h2 id="原型对象"><a href="#原型对象" class="headerlink" title="原型对象"></a>原型对象</h2><p>「红宝书」中说</p>
-<blockquote>
-<p>无论什么时候，只要创建了一个新函数，就会根据一组特定的规则来为该函数创建一个<code>prototype</code>属性，这个属性指向函数的原型对象。</p>
-<p>并且在默认情况下，所有的原型对象都会自动获得一个<code>constructor</code>（构造函数）属性，这个属性是一个指向<code>prototype</code>属性所在函数的指针。</p>
-</blockquote>
-<p>例如：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">'F'</span></span><br><span class="line">&#125;</span><br><span class="line">Father.prototype.constructor <span class="comment">// function Father()</span></span><br></pre></td></tr></table></figure>
-<p>倘若我们调用构造函数创建一个新实例：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> father = <span class="keyword">new</span> Father()</span><br></pre></td></tr></table></figure>
-<p>那么该实例的内部就会包含一个指针（内部属性），指向构造函数的原型对象。</p>
-<p>在某些地方（Chrome，Firefox），我们可以这样访问它：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">father.__proto__ <span class="comment">// Father.prototype</span></span><br><span class="line">father.__proto__.constructor <span class="comment">// function Father()</span></span><br></pre></td></tr></table></figure>
-<p>并且，这个连接存在于实例与构造函数的<strong>原型对象</strong>之间，而不是实例与构造函数之间。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端常见知识点（四）</title>
-    <url>/archives/4adfd4ff.html</url>
-    <content><![CDATA[<h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><p>IE 的事件流叫做「事件冒泡」，是指事件开始的时候是由最具体的元素（文档中嵌套层次最深的那个节点），或者说，是距离事件发生的最近的节点接受，然后<strong>逐级向上</strong>传播到较为不具体的节点（<code>document</code>）。</p>
-<p>而 Netscape （网景）团队提出的另外一种事件流叫做「事件捕获」，与事件冒泡刚好相反，事件捕获的思想是不太具体的节点应该更先接收到事件，最具体的节点最后接收到事件。</p>
-<a id="more"></a>
-<h2 id="DOM-事件流"><a href="#DOM-事件流" class="headerlink" title="DOM 事件流"></a>DOM 事件流</h2><p>「DOM 2 级事件」规定，事件流包括三个阶段：<strong>事件捕获</strong>、<strong>事件处理</strong>和<strong>事件冒泡</strong>阶段，并且在事件捕获的阶段，实际发生事件的节点不会接收到事件，事件从<code>document</code>到<code>&lt;html&gt;</code>再到<code>&lt;body&gt;</code>后就停止了，之后在目标节点上发生，并在事件处理中被看成是冒泡阶段的一部分，之后在冒泡阶段中，事件又传播回<code>document</code>。</p>
-<h2 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h2><p>事件对象<code>event</code>是一个 在触发 DOM 上的某个事件时产生的，包含所有与该事件有关的信息的 对象。例如：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span>BUTTON<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>)</span></span><br><span class="line"><span class="javascript">            btn.onclick = <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(event)</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>点击按钮，然后在 Chrome 浏览器的控制台里我们就可以看到<code>event</code>对象的所有信息了。比如事件的类型<code>event.type</code>（<code>click</code>），事件的目标（即导致事件产生的元素）<code>event.target</code>（<code>button#btn</code>）等。合理利用事件对象的这些属性帮助我们提升不少工作效率，例如使用<code>target</code>属性完成事件委托。</p>
-<h2 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h2><p>在「红宝书」中有这么一个例子：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"links"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"goSomewhere"</span>&gt;</span>Go Somewhere<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"doSomething"</span>&gt;</span>Do doSomething<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"greet"</span>&gt;</span>Greet<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> links = <span class="built_in">document</span>.getElementById(<span class="string">'links'</span>)</span></span><br><span class="line"><span class="javascript">            links.addEventListener(<span class="string">'click'</span>, (event) =&gt; &#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> target = event.target</span></span><br><span class="line"><span class="javascript">                <span class="keyword">switch</span> (target.id) &#123;</span></span><br><span class="line"><span class="javascript">                    <span class="keyword">case</span> <span class="string">'goSomewhere'</span>:</span></span><br><span class="line"><span class="javascript">                        location.href = <span class="string">'anotherPage.html'</span></span></span><br><span class="line"><span class="javascript">                        <span class="keyword">break</span></span></span><br><span class="line"><span class="javascript">                    <span class="keyword">case</span> <span class="string">'doSomething'</span>:</span></span><br><span class="line"><span class="javascript">                        <span class="built_in">document</span>.title = <span class="string">'The Title Changed'</span></span></span><br><span class="line"><span class="javascript">                        <span class="keyword">break</span></span></span><br><span class="line"><span class="javascript">                    <span class="keyword">case</span> <span class="string">'greet'</span>:</span></span><br><span class="line"><span class="javascript">                        alert(<span class="string">'Hello!'</span>)</span></span><br><span class="line"><span class="javascript">                        <span class="keyword">break</span></span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="undefined">            &#125;)</span></span><br><span class="line"><span class="undefined">        </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>在这个例子里，我们使用事件委托只为<code>&lt;ul&gt;</code>元素添加了一个<code>onclick</code>事件处理程序，由于事件冒泡的特点，<code>&lt;ul&gt;</code>就可以处理它的所有子节点<code>&lt;li&gt;</code>的事件，这样子，比取得每一个<code>&lt;li&gt;</code>元素并分别对齐添加事件要方便的多。</p>
-<p>并且这种方式因为只取得了一个 DOM 元素，只添加了一个事件处理程序，所以占用的内存更少，所花的时间也更少。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>心血来潮</title>
     <url>/archives/5be9a4c2.html</url>
     <content><![CDATA[<p>心血来潮想画一张表</p>
@@ -384,6 +304,48 @@ f(x)=g(x)+h(x)</script><p>其中 <script type="math/tex">g(x)</script> 表示目
       </categories>
       <tags>
         <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记一次折腾电信光猫的经历</title>
+    <url>/archives/4f4bc294.html</url>
+    <content><![CDATA[<a id="more"></a>
+<h1 id="烽火HG2201T"><a href="#烽火HG2201T" class="headerlink" title="烽火HG2201T"></a>烽火HG2201T</h1><p>烽火HG2201T 只有一个千兆口，并且仅支持 500Mbps 以下的宽带。</p>
+<ol>
+<li>首先连接上光猫自带的 WiFi，进入 <a href="http://192.168.1.1:8080" target="_blank" rel="noopener">http://192.168.1.1:8080</a> 后台管理地址，使用光猫后面贴的账号密码登录。</li>
+<li>登录后，在浏览器地址栏输入 <a href="http://192.168.1.1:8080/cgi-bin/baseinfoSet.cgi" target="_blank" rel="noopener">http://192.168.1.1:8080/cgi-bin/baseinfoSet.cgi</a> 回车，会得到一串 json 格式的字符串。</li>
+<li>其中 <code>&quot;baseinfoSet_TELECOMACCOUNT&quot;:&quot;telecomadmin&quot;</code> 是超级管理员账户，<code>&quot;baseinfoSet_TELECOMPASSWORD&quot;</code> 后面的字符串是超级管理员密码。</li>
+<li>超级管理员密码是 <code>ASCII</code> 格式，对照 <code>ASCII</code> 码表解出原始字符串后，拼在 <code>telecomadmin</code> 后即得到超级管理员密码。</li>
+</ol>
+<p>使用超级管理员登陆后，记住光猫的逻辑ID，后面换光猫的时候会用到（如下图）。<br><img src="/images/lightModem/逻辑ID.png" alt="逻辑ID" title="逻辑ID"></p>
+<h1 id="更换光猫"><a href="#更换光猫" class="headerlink" title="更换光猫"></a>更换光猫</h1><ol>
+<li>更换光猫的时，先将新光猫恢复出厂设置，然后插上电源和光纤。</li>
+<li>进入 <a href="http://192.168.1.1:8080" target="_blank" rel="noopener">http://192.168.1.1:8080</a> ，点击设备注册。<br><img src="/images/lightModem/设备注册.png" alt="设备注册" title="设备注册"></li>
+<li>输入从老光猫上看到的逻辑ID，等待业务下发后，设备注册成功，这一步如果不成功的话，可以打 10000 人工客服咨询。</li>
+</ol>
+<h1 id="TEWA-1000E"><a href="#TEWA-1000E" class="headerlink" title="TEWA-1000E"></a>TEWA-1000E</h1><p>TEWA-1000E 是一款 10GEPON 猫，有三个千兆口。</p>
+<ol>
+<li>将 U 盘插上光猫，在 <a href="http://192.168.1.1" target="_blank" rel="noopener">http://192.168.1.1</a> 能看到 U 盘挂载上。</li>
+<li>进入 <a href="http://192.168.1.1:8080" target="_blank" rel="noopener">http://192.168.1.1:8080</a> 后台管理地址，使用光猫后面贴的账号密码登录。</li>
+<li>进入设备管理页面，右键查看源代码，搜索 set3_sessionKey 字符串，会看到 set3_sessionKey_XXX。</li>
+<li>进入 <a href="http://192.168.1.1:8080/usbbackup.cmd?action=backupeble&amp;set3_sessionKey=set3_sessionKey_XXX" target="_blank" rel="noopener">http://192.168.1.1:8080/usbbackup.cmd?action=backupeble&amp;set3_sessionKey=set3_sessionKey_XXX</a>。</li>
+<li><p>在这个页面按 F12 打开控制台，输入以下代码执行：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">usbsubarea = &#123;</span><br><span class="line">   selectedIndex: <span class="number">0</span>,</span><br><span class="line">   value: <span class="string">"never_mind..."</span>,</span><br><span class="line">   options:[</span><br><span class="line">     &#123;<span class="attr">value</span>: <span class="string">"usb1_1"</span>&#125;</span><br><span class="line">   ]</span><br><span class="line"> &#125;;</span><br><span class="line"> btnApply();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>此时 U 盘中会多一个文件夹，里面有一个 cfg 后缀的文件。</p>
+</li>
+<li>在电脑上使用<a href="https://github.com/jonirrings/xor" target="_blank" rel="noopener">解密工具</a>解密，得到一个 xml 文件。文件中搜索 COM_TeleComAccount 即得到超级密码。</li>
+</ol>
+<h1 id="光猫改桥接模式"><a href="#光猫改桥接模式" class="headerlink" title="光猫改桥接模式"></a>光猫改桥接模式</h1><ol>
+<li>进入 <a href="http://192.168.1.1:8080" target="_blank" rel="noopener">http://192.168.1.1:8080</a> 后台管理页面，找到网络设置</li>
+<li>如下图更改对应设置即可，LAN 口绑定 4 个都勾选上<br><img src="/images/lightModem/桥接.png" alt="桥接" title="桥接"></li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>备份</tag>
       </tags>
   </entry>
   <entry>
@@ -447,6 +409,52 @@ f(x)=g(x)+h(x)</script><p>其中 <script type="math/tex">g(x)</script> 表示目
       </tags>
   </entry>
   <entry>
+    <title>Windows 下好用的软件</title>
+    <url>/archives/7484639a.html</url>
+    <content><![CDATA[<p>Windows 下一些好用的软件<br>自用，备份</p>
+<a id="more"></a>
+<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><ul>
+<li><a href="https://typora.io/" target="_blank" rel="noopener">Typora</a><br>主题等 <a href="https://github.com/typora" target="_blank" rel="noopener">GitHub 支援</a></li>
+</ul>
+<h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><ul>
+<li><a href="https://picpick.app/zh/" target="_blank" rel="noopener">PicPick</a></li>
+<li><a href="https://zh.snipaste.com/" target="_blank" rel="noopener">Snipaste</a></li>
+</ul>
+<h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><ul>
+<li><a href="https://www.listary.com/" target="_blank" rel="noopener">Listary</a></li>
+<li><a href="http://www.wox.one/" target="_blank" rel="noopener">Wox</a><br>开源软件。<a href="https://github.com/Wox-launcher/Wox" target="_blank" rel="noopener">GitHub 地址</a></li>
+</ul>
+<h2 id="看图"><a href="#看图" class="headerlink" title="看图"></a>看图</h2><ul>
+<li><a href="https://cn.bandisoft.com/honeyview/" target="_blank" rel="noopener">Honeyview</a></li>
+</ul>
+<h2 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h2><ul>
+<li><a href="http://cn.bandisoft.com/" target="_blank" rel="noopener">Bandizip</a></li>
+</ul>
+<h2 id="网速显示"><a href="#网速显示" class="headerlink" title="网速显示"></a>网速显示</h2><ul>
+<li>TrafficMonitor<br>开源软件。<a href="https://github.com/zhongyang219/TrafficMonitor" target="_blank" rel="noopener">GitHub 地址</a></li>
+</ul>
+<h2 id="状态栏透明"><a href="#状态栏透明" class="headerlink" title="状态栏透明"></a>状态栏透明</h2><ul>
+<li>TaskbarTool<br>个人作品<br>作者：浅陌兮。<br>联系方式：<a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#54;&#x37;&#x35;&#x39;&#x30;&#x33;&#x36;&#51;&#49;&#x40;&#113;&#x71;&#46;&#x63;&#111;&#x6d;">&#54;&#x37;&#x35;&#x39;&#x30;&#x33;&#x36;&#51;&#49;&#x40;&#113;&#x71;&#46;&#x63;&#111;&#x6d;</a><br>更新地址：<a href="https://yun.baidu.com/s/1dFNAfpZ" target="_blank" rel="noopener">百度云</a>，密码：tpi2。</li>
+</ul>
+<h2 id="文件预览"><a href="#文件预览" class="headerlink" title="文件预览"></a>文件预览</h2><ul>
+<li><a href="https://pooi.moe/QuickLook/" target="_blank" rel="noopener">QuickLook</a><br>开源软件。<a href="https://github.com/QL-Win/QuickLook" target="_blank" rel="noopener">GitHub 地址</a></li>
+</ul>
+<h2 id="应用卸载"><a href="#应用卸载" class="headerlink" title="应用卸载"></a>应用卸载</h2><ul>
+<li><a href="https://geekuninstaller.com" target="_blank" rel="noopener">Geek Uninstaller</a></li>
+</ul>
+<h2 id="GIF-录制"><a href="#GIF-录制" class="headerlink" title="GIF 录制"></a>GIF 录制</h2><ul>
+<li><a href="https://www.screentogif.com/" target="_blank" rel="noopener">ScreenToGif</a><br>开源软件。<a href="https://github.com/NickeManarin/ScreenToGif" target="_blank" rel="noopener">GitHub 地址</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>备份</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>碎碎念</title>
     <url>/archives/f3404829.html</url>
     <content><![CDATA[<a id="more"></a>
@@ -463,36 +471,37 @@ f(x)=g(x)+h(x)</script><p>其中 <script type="math/tex">g(x)</script> 表示目
       </tags>
   </entry>
   <entry>
-    <title>记一次折腾电信光猫的经历</title>
-    <url>/archives/4f4bc294.html</url>
-    <content><![CDATA[<a id="more"></a>
-<h1 id="烽火HG2201T"><a href="#烽火HG2201T" class="headerlink" title="烽火HG2201T"></a>烽火HG2201T</h1><p>烽火HG2201T 只有一个千兆口，并且仅支持 500Mbps 以下的宽带。</p>
-<ol>
-<li>首先连接上光猫自带的 WiFi，进入 <a href="http://192.168.1.1:8080" target="_blank" rel="noopener">http://192.168.1.1:8080</a> 后台管理地址，使用光猫后面贴的账号密码登录。</li>
-<li>登录后，在浏览器地址栏输入 <a href="http://192.168.1.1:8080/cgi-bin/baseinfoSet.cgi" target="_blank" rel="noopener">http://192.168.1.1:8080/cgi-bin/baseinfoSet.cgi</a> 回车，会得到一串 json 格式的字符串。</li>
-<li>其中 <code>&quot;baseinfoSet_TELECOMACCOUNT&quot;:&quot;telecomadmin&quot;</code> 是超级管理员账户，<code>&quot;baseinfoSet_TELECOMPASSWORD&quot;</code> 后面的字符串是超级管理员密码。</li>
-<li>超级管理员密码是 <code>ASCII</code> 格式，对照 <code>ASCII</code> 码表解出原始字符串后，拼在 <code>telecomadmin</code> 后即得到超级管理员密码。</li>
-</ol>
-<p>使用超级管理员登陆后，记住光猫的逻辑ID，后面换光猫的时候会用到。</p>
-<h1 id="TEWA-1000E"><a href="#TEWA-1000E" class="headerlink" title="TEWA-1000E"></a>TEWA-1000E</h1><p>TEWA-1000E 是一款 10GEPON 猫，有三个千兆口。</p>
-<ol>
-<li>将 U 盘插上光猫，在 <a href="http://192.168.1.1" target="_blank" rel="noopener">http://192.168.1.1</a> 能看到 U 盘挂载上。</li>
-<li>进入 <a href="http://192.168.1.1:8080" target="_blank" rel="noopener">http://192.168.1.1:8080</a> 后台管理地址，使用光猫后面贴的账号密码登录。</li>
-<li>进入设备管理页面，右键查看源代码，搜索 set3_sessionKey 字符串，会看到 set3_sessionKey_XXX。</li>
-<li>进入 <a href="http://192.168.1.1:8080/usbbackup.cmd?action=backupeble&amp;set3_sessionKey=set3_sessionKey_XXX" target="_blank" rel="noopener">http://192.168.1.1:8080/usbbackup.cmd?action=backupeble&amp;set3_sessionKey=set3_sessionKey_XXX</a>。</li>
-<li>在这个页面按 F12 打开控制台，输入以下代码执行：</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">usbsubarea = &#123;</span><br><span class="line">   selectedIndex: <span class="number">0</span>,</span><br><span class="line">   value: <span class="string">"never_mind..."</span>,</span><br><span class="line">   options:[</span><br><span class="line">     &#123;<span class="attr">value</span>: <span class="string">"usb1_1"</span>&#125;</span><br><span class="line">   ]</span><br><span class="line"> &#125;;</span><br><span class="line"> btnApply();</span><br></pre></td></tr></table></figure>
-<ol>
-<li>此时 U 盘中会多一个文件夹，里面有一个 cfg 后缀的文件。</li>
-<li>在电脑上使用<a href="https://github.com/jonirrings/xor" target="_blank" rel="noopener">解密工具</a>解密，得到一个 xml 文件。文件中搜索 COM_TeleComAccount 即得到超级密码。</li>
-</ol>
+    <title>前端常见知识点（二）</title>
+    <url>/archives/b0ec6ec8.html</url>
+    <content><![CDATA[<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p>根据「红宝书」中的描述，<strong>原型链</strong>是实现继承的主要方法。其原理是利用<strong>原型</strong>让一个引用类型继承另一个引用类型的属性和方法。</p>
+<a id="more"></a>
+<p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">'F'</span></span><br><span class="line">&#125;</span><br><span class="line">Father.prototype.getFatherName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Son</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.sonname = <span class="string">"S"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 创建 Father 实例，并将其赋给 Son.prototype</span></span><br><span class="line">Son.prototype = <span class="keyword">new</span> Father()</span><br><span class="line">Son.prototype.getSonName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.sonname</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> son1 = <span class="keyword">new</span> Son()</span><br><span class="line"><span class="built_in">console</span>.log(son1.getFatherName()) <span class="comment">// F</span></span><br></pre></td></tr></table></figure>
+<p>上述代码实现了<code>Son</code>继承<code>Father</code>，其本质是重写<code>Son</code>的原型对象，并以<code>Father</code>的实例代之，这样，原本存在于<code>Father</code>实例中的属性和方法，现在也存在于<code>Son.prototype</code>中了。</p>
+<p>同时的，<strong>所有函数的默认原型都是<code>Object</code>的实例</strong>，即可以看做是</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Father.prototype = <span class="keyword">new</span> <span class="built_in">Object</span>()</span><br></pre></td></tr></table></figure>
+<p>这样我们就有了「<code>Son</code>的原型对象中包含着指向<code>Father</code>原型的指针，<code>Father</code>的原型对象中又包含着指向<code>Object</code>原型的指针」，如此递进，形成了实例与原型的链，这就是原型链的基本概念。</p>
+<p>但是所谓的「原型对象」又是什么呢？</p>
+<h2 id="原型对象"><a href="#原型对象" class="headerlink" title="原型对象"></a>原型对象</h2><p>「红宝书」中说</p>
+<blockquote>
+<p>无论什么时候，只要创建了一个新函数，就会根据一组特定的规则来为该函数创建一个<code>prototype</code>属性，这个属性指向函数的原型对象。</p>
+<p>并且在默认情况下，所有的原型对象都会自动获得一个<code>constructor</code>（构造函数）属性，这个属性是一个指向<code>prototype</code>属性所在函数的指针。</p>
+</blockquote>
+<p>例如：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">'F'</span></span><br><span class="line">&#125;</span><br><span class="line">Father.prototype.constructor <span class="comment">// function Father()</span></span><br></pre></td></tr></table></figure>
+<p>倘若我们调用构造函数创建一个新实例：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> father = <span class="keyword">new</span> Father()</span><br></pre></td></tr></table></figure>
+<p>那么该实例的内部就会包含一个指针（内部属性），指向构造函数的原型对象。</p>
+<p>在某些地方（Chrome，Firefox），我们可以这样访问它：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">father.__proto__ <span class="comment">// Father.prototype</span></span><br><span class="line">father.__proto__.constructor <span class="comment">// function Father()</span></span><br></pre></td></tr></table></figure>
+<p>并且，这个连接存在于实例与构造函数的<strong>原型对象</strong>之间，而不是实例与构造函数之间。</p>
 ]]></content>
       <categories>
         <category>学习</category>
       </categories>
       <tags>
-        <tag>备份</tag>
+        <tag>学习</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
 </search>
