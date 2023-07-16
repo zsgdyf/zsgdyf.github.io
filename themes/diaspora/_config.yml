@@ -23,18 +23,18 @@ welcome_cover: /img/welcome-cover.png
 # 默认文章封面图（随机调用,支持外链）
 cover: 
   - /img/cover.png
-  - /img/cover2.png
-  - /img/cover3.png
-  - /img/cover4.png
-  - /img/cover5.png
-  - /img/cover6.png
-  - /img/cover7.png
-  - /img/cover8.png
-  - /img/cover9.png
-  - /img/cover10.png
-  - /img/cover12.png
-  - /img/cover13.png
-  - /img/cover15.png
+#   - /img/cover2.png
+#   - /img/cover3.png
+#   - /img/cover4.png
+#   - /img/cover5.png
+#   - /img/cover6.png
+#   - /img/cover7.png
+#   - /img/cover8.png
+#   - /img/cover9.png
+#   - /img/cover10.png
+#   - /img/cover12.png
+#   - /img/cover13.png
+#   - /img/cover15.png
 
 
  
