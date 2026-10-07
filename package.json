@@ -6,10 +6,11 @@
     "version": "3.9.0"
   },
   "scripts": {
-    "server": "hexo server",
+    "postinstall": "node scripts/fix-hexo.js",
+    "server": "node scripts/fix-hexo.js && hexo server",
     "clean": "hexo clean",
-    "build": "hexo generate",
-    "deploy": "hexo clean && hexo g && hexo d"
+    "build": "node scripts/fix-hexo.js && hexo generate",
+    "deploy": "node scripts/fix-hexo.js && hexo clean && hexo g && hexo d"
   },
   "dependencies": {
     "hexo": "^3.9.0",
