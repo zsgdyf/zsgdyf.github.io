@@ -1,1 +1,1 @@
-hexo clean && hexo g && hexo d
+call npx hexo clean && call npx hexo g && call npx hexo d

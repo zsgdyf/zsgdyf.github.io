@@ -1,1 +1,1 @@
-hexo s
+call npx hexo s
