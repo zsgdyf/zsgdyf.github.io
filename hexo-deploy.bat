@@ -1,1 +1,1 @@
-call node scripts\fix-hexo.js && call npx hexo clean && call npx hexo g && call npx hexo d
+call npx hexo clean && call npx hexo g && call npx hexo d

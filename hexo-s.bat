@@ -1,1 +1,1 @@
-call node scripts\fix-hexo.js && call npx hexo s
+call npx hexo s
